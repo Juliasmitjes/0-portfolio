@@ -1,11 +1,19 @@
-import { useState } from 'react'
-import './index.css'
+import './styles/index.css'
+import {Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout.jsx';
+import Home from './pages/Home.jsx';
+import Contact from './pages/Contact.jsx';
+import NoPage from "./pages/NoPage";
 
 function App() {
   return (
-    <>
-    <h1 className="text-primary">hallo</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<NoPage />} />
+      </Route>
+    </Routes>
   )
 }
 

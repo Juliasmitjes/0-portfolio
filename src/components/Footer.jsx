@@ -1,4 +1,5 @@
-import React from 'react'
+'use client' 
+
 import { FaGithub, FaPhoneAlt } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 

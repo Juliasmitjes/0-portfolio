@@ -25,7 +25,7 @@ const Resume = () => {
         <p className="text-2xl font-myText text-myOcean font-semibold"> Frontend webdevelopment 
         </p>
          <p className="text-2xl font-myText text-myOcean">
-          HTML, (Taiwlind) CSS, JavaScript, React + Vite
+          HTML, (Taiwlind) CSS, JavaScript, <br /> React + Vite
        
          <p className="text-2xl font-myText text-myOcean font-semibold pt-3"> Frontend webdevelopment 
         </p>

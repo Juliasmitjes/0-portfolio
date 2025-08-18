@@ -21,7 +21,7 @@ const Home = () => {
             class="absolute top-0 left-0 z-10 rotate-[20deg]" />
         </div>
     </div>
-    <div className="grid grid-rows-2 place-items-center justify-center bg-myWarm pt-20 mx-4">
+    <div className="grid grid-rows-2 place-items-center justify-center bg-myWarm pt-15 mx-4">
       <h1 className="text-4xl font-myHeader text-myBlue">
         A bit about me
       </h1>

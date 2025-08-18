@@ -8,20 +8,8 @@ const navLinks = [
 
 const Header = () => {
   return (
-    <nav className="bg-myWarm fixed w-full z-20 top-0 start-0">
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-2">
-
-        {/* logo en titel links */}
-        <a href="#" className="flex items-center space-x-3">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            alt="Logo"
-            className="h-8"
-          />
-          <span className="text-2xl font-myHeader text-myBlue">
-            JS PORTFOLIO
-          </span>
-        </a>
+    <nav className="bg-myWarm md:flex md:items-center md:justify-end mt-10 rounded-lg p-4 md:p-6 xl:p-8 my-6 mx-4">      
+      <div className="flex items-center flex-wrap mb-6 md:mb-0">
 
         {/* nav-links, knop en hamburger rechts*/}
         <div className="flex items-center space-x-4">
@@ -31,7 +19,7 @@ const Header = () => {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="px-3 py-2 text-myDark font-myText hover:text-myBlue"
+                  className="px-3 py-2 text-myDark text-lg font-myText hover:text-myBlue"
                 >
                   {link.name}
                 </a>

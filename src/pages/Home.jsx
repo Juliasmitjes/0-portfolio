@@ -25,7 +25,7 @@ const Home = () => {
       <h1 className="text-4xl font-myHeader text-myBlue">
         A bit about me
       </h1>
-      <p className="text-2xl font-myText text-myOcean pb-15 max-w-lg text-center">
+      <p className="text-2xl font-myText text-myOcean pb-20 max-w-lg text-center">
         I light up around good ideas and great people. From debugging code to designing systems, I’m all about mixing tech with taste.
       </p>
       </div>

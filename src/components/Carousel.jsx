@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const slides = [
   (
@@ -41,21 +42,39 @@ const slides = [
 const TextCarousel = () => {
   const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % slides.length);
-    }, 4000); // wissel elke 4 seconden
+  const handlePrev = () => {
+    setIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
 
-    return () => clearInterval(timer);
-  }, []);
+  const handleNext = () => {
+    setIndex((prev) => (prev + 1) % slides.length);
+  };
 
   return (
-    <div className="flex items-center justify-center h-64 bg-gray-50 rounded-lg shadow-lg px-6 text-center">
-      <div className="transition-opacity duration-500 ease-in-out w-full">
+    <div className="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg px-6 py-8 h-72 w-full max-w-4xl mx-auto">
+   
+      <button
+        onClick={handlePrev}
+        className="px-4 py-2 bg-myBlue text-white rounded hover:bg-myOcean transition"
+      >
+        <FaArrowLeft />
+      </button>
+
+
+      <div className="text-center w-full px-6">
         {slides[index]}
       </div>
-    </div>
-  );
-}
 
-export default TextCarousel
+   
+      <button
+        onClick={handleNext}
+        className="px-4 py-2 bg-myBlue text-white rounded hover:bg-myOcean transition"
+      >
+    <FaArrowRight />
+    </button>
+    </div>
+
+  );
+};
+
+export default TextCarousel;

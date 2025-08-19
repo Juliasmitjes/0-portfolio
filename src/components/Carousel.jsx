@@ -5,15 +5,17 @@ const slides = [
   (
     <div>
       <h1 className="mb-3 text-4xl font-myHeader text-myBlue">Education</h1>
-      <p className="text-2xl font-myText text-myOcean">
+      <p className="text-2xl font-myText text-myOcean font-semibold">
         MSc International Management
-        <br />
+        <p className="font-normal">
         strong focus on Econometrics
         <br />
         <br />
         Utrecht University  
-        <br />
+        </p>
+        <p className="font-semibold">
         Awarded Cum Laude
+        </p>
       </p>
     </div>
   ),
@@ -29,12 +31,13 @@ const slides = [
   ),
   (
     <div>
-      <h1 className="mb-3 text-4xl font-myHeader text-myBlue">Skills and interests</h1>
+      <h1 className="mb-3 text-4xl font-myHeader text-myBlue">Proficient</h1>
       <p className="text-2xl font-myText text-myOcean font-semibold"> Frontend webdevelopment </p>
          <p className="text-2xl font-myText text-myOcean">
           HTML, (Taiwlind) CSS, JavaScript, <br /> React + Vite
           </p>
-         <p className="text-2xl font-myText text-myOcean font-semibold pt-3"> Backend webdevelopment </p>
+          <h1 className="mb-3 text-4xl font-myHeader text-myBlue pt-6">Beginner</h1>
+         <p className="text-2xl font-myText text-myOcean font-semibold "> Backend webdevelopment </p>
          <p className="text-2xl font-myText text-myOcean">
           Node.js, Express.js, Git, PostgreSQL
           </p>
@@ -54,7 +57,7 @@ const TextCarousel = () => {
   };
 
   return (
-    <div className="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg px-6 h-80 w-full">
+    <div className="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg px-6 h-86 w-full">
    
       <button
         onClick={handlePrev}

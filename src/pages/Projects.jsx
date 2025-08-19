@@ -16,7 +16,7 @@ const Projects = () => (
               alt="Pijl naar beneden"
               className="w-28 h-auto"
             />
-            <p className="ml-2 text-2xl font-myText text-myOcean">
+            <p className="ml-2 mb-10 text-2xl font-myText text-myOcean">
               Curious about today's <br />
               weather?
             </p>
@@ -25,7 +25,8 @@ const Projects = () => (
         </div>
 
    
-        <div className="flex justify-around items-end h-76">
+    <div className="flex flex-col items-start">
+        <div className="flex justify-around items-end w-full h-76">
           <a href="#memory">
             <img
               src="/images/closedRound.png"
@@ -48,6 +49,12 @@ const Projects = () => (
             />
           </a>
         </div>
+
+        <p className="mt-25 pl-2 text-2xl font-myText text-myOcean text-left">
+          Or maybe you'd rather play a game?
+        </p>
+      </div>
+
       </div>
     </div>
   </div>

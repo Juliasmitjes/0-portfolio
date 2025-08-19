@@ -54,7 +54,7 @@ const TextCarousel = () => {
   };
 
   return (
-    <div className="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg px-6 py-8 h-80 w-full">
+    <div className="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg px-6 h-80 w-full">
    
       <button
         onClick={handlePrev}

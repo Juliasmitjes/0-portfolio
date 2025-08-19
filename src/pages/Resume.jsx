@@ -2,17 +2,16 @@ import TextCarousel from '../components/Carousel.jsx';
 
 const Resume = () => {
   return (
-   <>
-   <TextCarousel />
-   <div className="flex justify-center my-16">
-    <button className="text-2xl font-myText text-myOcean hover:text-myBlue cursor-pointer">
+  <div className="flex flex-col items-center">
+    <TextCarousel />
+     <a
+        href="/path/to/resume.pdf"
+        download
+        className="text-2xl pt-13 font-myText text-myOcean hover:text-myBlue cursor-pointer"
+      >
       Download resume
-    </button>
-  </div>
-
-
-  
-   </>
+      </a>
+</div>
   );
 };
 

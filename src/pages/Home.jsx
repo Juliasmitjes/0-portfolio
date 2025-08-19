@@ -30,7 +30,7 @@ const Home = () => {
         I light up around good ideas and great people. From debugging code to designing systems, I’m all about mixing tech with taste.
       </p>
       </div>
-    <div id="resume-section" className="w-2xl h-96">
+    <div id="resume-section" className="w-2xl h-96 mb-20">
       <Resume />
     </div>
   </div>    

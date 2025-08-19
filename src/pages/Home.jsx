@@ -21,15 +21,18 @@ const Home = () => {
             className="absolute top-0 left-0 z-10 rotate-[20deg]" />
         </div>
     </div>
-    <div className="grid grid-rows-2 place-items-center justify-center bg-myWarm pt-15 mx-4">
-      <h1 className="text-4xl font-myHeader text-myBlue">
+    <div className="flex flex-col place-items-center justify-center bg-myWarm pt-15 mx-4">
+      <h1 className="text-4xl font-myHeader text-myBlue pb-8">
         A bit about me
       </h1>
       <p className="text-2xl font-myText text-myOcean pb-20 max-w-lg text-center">
         I light up around good ideas and great people. From debugging code to designing systems, I’m all about mixing tech with taste.
       </p>
       </div>
-   <Resume />
+    <div id="resume-section">
+      <Resume />
+    </div>
+
   </div>    
   )
 }

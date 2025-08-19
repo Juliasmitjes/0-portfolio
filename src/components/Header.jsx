@@ -1,8 +1,10 @@
 'use client' 
 
+import Resume from '../pages/Resume.jsx';
+
 const navLinks = [
   { name: 'About me', href: '#' },
-  { name: 'Resume', href: '#' },
+  { name: 'Resume', href: '#resume-section' },
   { name: 'Projects', href: '#' },
 ]
 
@@ -28,7 +30,7 @@ const Header = () => {
           </ul>
           <button
             type="button"
-            className="hidden ml-9 md:inline-flex items-center font-myText px-4 py-2 bg-myBlue text-white rounded-lg text-lg font-medium hover:bg-myDark focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="hidden ml-9 md:inline-flex items-center font-myText px-4 py-2 bg-myBlue text-white rounded-lg text-lg cursor-pointer font-medium hover:bg-myDark focus:outline-none focus:ring-2 focus:ring-blue-300"
           >
             Contact
           </button>

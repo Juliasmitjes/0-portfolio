@@ -11,3 +11,7 @@
   --font-myHeader: 'Tilt Warp', sans-serif;
   --font-myText: 'Red Hat Text', sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}

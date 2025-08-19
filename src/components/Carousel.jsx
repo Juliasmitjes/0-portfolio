@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const slides = [
@@ -6,7 +6,10 @@ const slides = [
     <div>
       <h1 className="mb-3 text-4xl font-myHeader text-myBlue">Education</h1>
       <p className="text-2xl font-myText text-myOcean">
-        MSc with econometrics  
+        MSc International Management
+        <br />
+        strong focus on Econometrics
+        <br />
         <br />
         Utrecht University  
         <br />
@@ -55,7 +58,7 @@ const TextCarousel = () => {
    
       <button
         onClick={handlePrev}
-        className="px-4 py-2 bg-myBlue text-white rounded hover:bg-myOcean transition"
+        className="px-4 py-2 bg-myBlue text-white rounded hover:bg-myOcean cursor-pointer"
       >
         <FaArrowLeft />
       </button>
@@ -68,7 +71,7 @@ const TextCarousel = () => {
    
       <button
         onClick={handleNext}
-        className="px-4 py-2 bg-myBlue text-white rounded hover:bg-myOcean transition"
+        className="px-4 py-2 bg-myBlue text-white rounded hover:bg-myOcean cursor-pointer"
       >
     <FaArrowRight />
     </button>

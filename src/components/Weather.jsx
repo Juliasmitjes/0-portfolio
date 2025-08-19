@@ -121,7 +121,7 @@ const Weather = () => {
           <WiHumidity className="text-2xl w-6"/>
           <div>
             <p>{weatherData.humidity} %</p>
-            <span>Humidity</span>
+            <span>humidity</span>
           </div>
         </div>
 
@@ -129,7 +129,7 @@ const Weather = () => {
           <FaWind className="mt-1 w-6"/>
           <div>
             <p>{weatherData.windSpeed} Km/h</p>
-            <span>Wind speed</span>
+            <span>wind speed</span>
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@ const Weather = () => {
         ref={inputRef} 
         type="text" 
         placeholder="Search" 
-        className="py-1 pl-2 rounded-lg mr-2 text-myDark bg-white"
+        className="py-1 pl-2 rounded-lg mr-2 text-myDark bg-white focus:outline-none focus:ring-2 focus:ring-myBlue"
         onKeyDown={(e) => {
         if (e.key === "Enter")
          search(inputRef.current.value);

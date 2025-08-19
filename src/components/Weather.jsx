@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { WiHumidity } from "react-icons/wi";
-import { FaWind } from "react-icons/fa";
+import { FaWind, FaInfoCircle } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import cloudy from '../images/cloudy.png';
 import rain from '../images/rain.png';
@@ -14,7 +14,15 @@ const Weather = () => {
 
   const inputRef = useRef()
 
-  const [weatherData, setWeatherData] = useState(false);
+  const [weatherData, setWeatherData] = useState({
+  humidity: 0,
+  windSpeed: 0,
+  temperature: 0,
+  location: "–",
+  icon: sun
+    });
+
+  const [errorMessage, setErrorMessage] = useState("");
 
   const allIcons = {
     "01d": sun,
@@ -40,7 +48,7 @@ const Weather = () => {
   const search = async (city) => {
 
     if(city === ""){
-      alert("Entery city name");
+      setErrorMessage("Enter city name.");
       return; 
     }
 
@@ -51,11 +59,12 @@ const Weather = () => {
       const data = await response.json();
 
       if(!response.ok){
-        alert(data.message);
+        setErrorMessage("City not found.");
         return;
       }
 
-      console.log(data);
+      setErrorMessage("");
+
       const icon = allIcons[data.weather[0].icon] || sun; 
 
       setWeatherData({ 
@@ -80,7 +89,26 @@ const Weather = () => {
   return (
   <div className="bg-myOcean shadow-lg font-myText text-white rounded-lg flex flex-col items-center p-5 w-sm">
 
-  {weatherData?<>
+    {errorMessage && (
+      <div className="absolute flex items-center p-4 mb-4 text-lg text-myDark rounded-lg bg-blue-50" role="alert">
+        <FaInfoCircle className="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" />
+        <span className="sr-only">Info</span>
+        <div>
+          <span className="font-medium">Error!</span> {errorMessage}
+        </div>
+
+        <button
+          type="button"
+          className="absolute top-0 right-2 scale-150 text-myDark cursor-pointer "
+          onClick={() => setErrorMessage("")}
+        >
+          <span className="sr-only">Close</span>
+          &times;
+        </button>
+      </div>
+    )}
+
+  {<>
         <img src={weatherData.icon} alt="" className="w-30 mx-10 my-3"/>
 
         <div className="flex flex-row items-center justify-center gap-4 mt-3">
@@ -88,10 +116,7 @@ const Weather = () => {
           <p className="font-bold text-2xl">{weatherData.location}</p>
         </div>
 
-      
-
       <div className="mt-8 flex justify-between gap-12">
-
         <div className="flex flex-start gap-2">
           <WiHumidity className="text-2xl w-6"/>
           <div>
@@ -107,14 +132,19 @@ const Weather = () => {
             <span>Wind speed</span>
           </div>
         </div>
-
-
       </div>
-      
-      </>:<></>} 
+      </>} 
 
       <div className="flex items-center mt-8 ">
-        <input ref={inputRef} type="text" placeholder="Search" className="py-1 pl-2 rounded-lg mr-2 text-myDark bg-white"/>
+        <input 
+        ref={inputRef} 
+        type="text" 
+        placeholder="Search" 
+        className="py-1 pl-2 rounded-lg mr-2 text-myDark bg-white"
+        onKeyDown={(e) => {
+        if (e.key === "Enter")
+         search(inputRef.current.value);
+        }}/>
         <CiSearch className="cursor-pointer" size={30}  onClick={() => search (inputRef.current.value)}/>
       </div>
     </div>

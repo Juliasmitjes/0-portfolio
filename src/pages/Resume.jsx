@@ -7,7 +7,7 @@ const Resume = () => {
      <a
         href="/path/to/resume.pdf"
         download
-        className="text-2xl pt-13 font-myText text-myOcean hover:text-myBlue cursor-pointer"
+        className="text-2xl mt-13 font-myText text-myOcean hover:text-myBlue cursor-pointer"
       >
       Download resume
       </a>

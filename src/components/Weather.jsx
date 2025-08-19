@@ -90,10 +90,10 @@ const Weather = () => {
 
       
 
-      <div className="mt-8 flex justify-between">
+      <div className="mt-8 flex justify-between gap-12">
 
         <div className="flex flex-start gap-2">
-          <WiHumidity className="mt-1 w-6"/>
+          <WiHumidity className="text-2xl w-6"/>
           <div>
             <p>{weatherData.humidity} %</p>
             <span>Humidity</span>
@@ -113,12 +113,10 @@ const Weather = () => {
       
       </>:<></>} 
 
-      <div className="flex ">
-        <input ref={inputRef} type="text" placeholder="Search"/>
-        <CiSearch className="search-icon" size={32}  onClick={() => search (inputRef.current.value)}/>
+      <div className="flex items-center mt-8 ">
+        <input ref={inputRef} type="text" placeholder="Search" className="py-1 pl-2 rounded-lg mr-2 text-myDark bg-white"/>
+        <CiSearch className="cursor-pointer" size={30}  onClick={() => search (inputRef.current.value)}/>
       </div>
-      
-
     </div>
   )
 }

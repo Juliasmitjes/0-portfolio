@@ -54,7 +54,7 @@ const TextCarousel = () => {
   };
 
   return (
-    <div className="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg px-6 py-8 h-72 w-full max-w-4xl mx-auto">
+    <div className="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg px-6 py-8 h-80 w-full">
    
       <button
         onClick={handlePrev}
@@ -64,7 +64,7 @@ const TextCarousel = () => {
       </button>
 
 
-      <div className="text-center w-full px-6">
+      <div className="text-center px-6">
         {slides[index]}
       </div>
 

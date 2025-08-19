@@ -4,11 +4,12 @@ import Resume from './Resume.jsx';
 
 const Home = () => {
   return (
-    <div className="grid grid-rows-2 place-items-center justify-center bg-myWarm pt-16 mx-4">
+    <div className="flex flex-col items-center bg-myWarm pt-16 mx-4">
+
       <h1 className="text-[80px] font-myHeader text-myBlue">
         Hi! I'm Julia Smitjes
       </h1>
-      <p className="text-3xl font-myText text-myOcean pb-10">  
+      <p className="text-3xl font-myText text-myOcean pt-4 pb-20">  
         Running on Wi-Fi, espresso, and curiosity.
       </p>
 
@@ -25,14 +26,13 @@ const Home = () => {
       <h1 className="text-4xl font-myHeader text-myBlue pb-8">
         A bit about me
       </h1>
-      <p className="text-2xl font-myText text-myOcean pb-20 max-w-lg text-center">
+      <p className="text-2xl font-myText text-myOcean pb-25 max-w-lg text-center">
         I light up around good ideas and great people. From debugging code to designing systems, I’m all about mixing tech with taste.
       </p>
       </div>
-    <div id="resume-section">
+    <div id="resume-section" className="w-2xl h-96">
       <Resume />
     </div>
-
   </div>    
   )
 }

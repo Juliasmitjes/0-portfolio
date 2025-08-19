@@ -4,9 +4,12 @@ const Resume = () => {
   return (
    <>
    <TextCarousel />
-   <div className="my-15">
-     <button href="#" className="text-2xl font-myText text-myOcean hover:text-myBlue cursor-pointer"> Download resume </button>
-   </div>
+   <div className="flex justify-center my-16">
+    <button className="text-2xl font-myText text-myOcean hover:text-myBlue cursor-pointer">
+      Download resume
+    </button>
+  </div>
+
 
   
    </>

@@ -13,7 +13,7 @@ const Projects = () => (
           <div className="flex items-center">
             <img
               src="/images/arrow.png"
-              alt="Pijl naar beneden"
+              alt="arrow"
               className="w-28 h-auto"
             />
             <p className="ml-2 mb-10 text-2xl font-myText text-myOcean">
@@ -45,16 +45,21 @@ const Projects = () => (
             <img
               src="/images/closedRound.png"
               alt="Tic tac toe"
-              className="w-40 cursor-pointer translate-y-20 transition-transform duration-300 ease-in-out hover:scale-110"
+              className="w-40 cursor-pointer translate-y-20 mr-10 transition-transform duration-300 ease-in-out hover:scale-110"
             />
           </a>
         </div>
 
-        <p className="mt-25 pl-2 text-2xl font-myText text-myOcean text-left">
-          Or maybe you'd rather play a game?
-        </p>
-      </div>
-
+        <div className="flex items-center mt-25 ml-7">
+          <p className="text-2xl font-myText text-myOcean mt-25 pl-7">
+            Or maybe you'd rather play a game?
+          </p>
+          <img 
+            src="/images/arrow2.png" 
+            alt="arrow" 
+            className="w-28 h-auto rotate-16" />
+        </div>
+       </div>
       </div>
     </div>
   </div>

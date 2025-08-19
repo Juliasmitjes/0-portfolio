@@ -35,7 +35,7 @@ const Home = () => {
       </p>
       </div>
     <div className="flex flex-col items-center">
-      <div id="resume-section" className="w-2xl h-96 mb-20">
+      <div id="resume-section" className="w-2xl h-96 mb-50">
         <Resume />
       </div>
     </div>

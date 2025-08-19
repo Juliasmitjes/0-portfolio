@@ -2,7 +2,7 @@ import TextCarousel from '../components/Carousel.jsx';
 
 const Resume = () => {
   return (
-  <div className="flex flex-col items-center">
+  <div className="pt-10 flex flex-col items-center">
     <TextCarousel />
      <a
         href="/path/to/resume.pdf"

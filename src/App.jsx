@@ -5,6 +5,9 @@ import Home from './pages/Home.jsx';
 import Contact from './pages/Contact.jsx';
 import NoPage from "./pages/NoPage";
 
+
+
+
 function App() {
   return (
     <Routes>

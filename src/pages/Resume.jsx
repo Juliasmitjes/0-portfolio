@@ -1,7 +1,19 @@
-import React from 'react';
+
 
 const Resume = () => {
   return (
+   <>
+    
+
+    
+      
+    
+    
+    
+   
+
+
+    
     <div className="flex flex-row bg-white py-20 text-center w-screen">
       <div className="flex flex-col justify-center w-1/2 pl-20">
         <h1 className="mb-3 text-4xl font-myHeader text-myBlue"> Education </h1>
@@ -26,13 +38,14 @@ const Resume = () => {
         </p>
          <p className="text-2xl font-myText text-myOcean">
           HTML, (Taiwlind) CSS, JavaScript, <br /> React + Vite
-       
-         <p className="text-2xl font-myText text-myOcean font-semibold pt-3"> Frontend webdevelopment 
-        </p>
+          </p>
+         <p className="text-2xl font-myText text-myOcean font-semibold pt-3"> Frontend webdevelopment     
           Node.js, Express.js, Git, PostgreSQL
         </p>
       </div> 
     </div>
+
+     </>
   );
 };
 

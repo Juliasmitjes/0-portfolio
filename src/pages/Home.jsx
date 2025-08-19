@@ -12,13 +12,13 @@ const Home = () => {
         Running on Wi-Fi, espresso, and curiosity.
       </p>
 
-    <div class="relative inline-block">
-        <img class="h-100 object-scale-down" src="/images/JuliaSmitjesImage.jpeg" alt="Julia Smitjes" />
-        <div class="absolute bottom-0 -left-15 w-36 h-32">
+    <div className="relative inline-block">
+        <img className="h-100 object-scale-down" src="/images/JuliaSmitjesImage.jpeg" alt="Julia Smitjes" />
+        <div className="absolute bottom-0 -left-15 w-36 h-32">
           <img src="/images/closedRound.png" alt="closed round"
-              class="absolute top-6 left-6 z-0" />
+              className="absolute top-6 left-6 z-0" />
           <img src="/images/openRound.png" alt="open round"
-            class="absolute top-0 left-0 z-10 rotate-[20deg]" />
+            className="absolute top-0 left-0 z-10 rotate-[20deg]" />
         </div>
     </div>
     <div className="grid grid-rows-2 place-items-center justify-center bg-myWarm pt-15 mx-4">

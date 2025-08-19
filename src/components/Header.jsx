@@ -5,7 +5,7 @@ import Resume from '../pages/Resume.jsx';
 const navLinks = [
   { name: 'About me', href: '#' },
   { name: 'Resume', href: '#resume-section' },
-  { name: 'Projects', href: '#' },
+  { name: 'Projects', href: '#projects-section' },
 ]
 
 const Header = () => {

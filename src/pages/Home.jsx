@@ -1,6 +1,7 @@
 'use client' 
 
 import Resume from './Resume.jsx'; 
+import Projects from './Projects.jsx';
 
 const Home = () => {
   return (
@@ -32,6 +33,9 @@ const Home = () => {
       </div>
     <div id="resume-section" className="w-2xl h-96 mb-20">
       <Resume />
+    </div>
+    <div id="projects-section" >
+      <Projects />
     </div>
   </div>    
   )

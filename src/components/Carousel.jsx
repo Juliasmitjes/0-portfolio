@@ -29,7 +29,7 @@ const slides = [
   ),
   (
     <div>
-      <h1 className="mb-3 text-4xl font-myHeader text-myBlue">Skills and interest</h1>
+      <h1 className="mb-3 text-4xl font-myHeader text-myBlue">Skills and interests</h1>
       <p className="text-2xl font-myText text-myOcean font-semibold"> Frontend webdevelopment </p>
          <p className="text-2xl font-myText text-myOcean">
           HTML, (Taiwlind) CSS, JavaScript, <br /> React + Vite

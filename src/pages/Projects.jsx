@@ -1,4 +1,12 @@
 import Weather from "../components/Weather";
+import { Link } from 'react-router-dom';
+
+
+const navLinks = [
+  { name: 'Memory', href: '/memory' },
+  { name: '', href: '#' },
+  { name: '', href: '#' },
+]
 
 const Projects = () => (
   <div className="min-h-screen bg-myWarm py-10">
@@ -27,13 +35,13 @@ const Projects = () => (
    
     <div className="flex flex-col items-start">
         <div className="flex justify-around items-end w-full h-76">
-          <a href="#memory">
+          <Link to="/memory">
             <img
               src="/images/closedRound.png"
               alt="Memory"
               className="w-40 cursor-pointer translate-y-6 transition-transform duration-300 ease-in-out hover:scale-110"
             />
-          </a>
+          </Link>
           <a href="#rps">
             <img
               src="/images/closedRound.png"

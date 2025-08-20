@@ -40,9 +40,9 @@ function ActionIcon({action, ...props}){
 function Player({name = "player", score = 0, action="rock"}){
   return(
     <div className="flex flex-col font-myText text-myOcean w-30 h-30">
-      <div className="score text-xl mb-6">{`${name}: ${score}`}</div>
-      <div className="action">
-        {action && <ActionIcon action={action} size={60} className="flex flex-row justify-center items-center"/>}
+      <div className="flex flex-row justify-center text-xl mb-6">{`${name}: ${score}`}</div>
+      <div className="flex flex-row justify-center items-center">
+        {action && <ActionIcon action={action} size={60}/>}
       </div>
     </div>
 )};

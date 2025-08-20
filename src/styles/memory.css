@@ -1,0 +1,38 @@
+
+
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transform: rotateY(180deg);
+  animation: 2s hideCard linear;
+  transition: transform 0.5s;
+}
+
+.card-img {
+  max-width: 70%;
+  max-height: 70%;
+  transform: scale(0); 
+  transition: transform 0.5s ease-in-out;
+}
+
+.card-img.hide {
+  transform: scale(0);
+}
+
+
+.card.correct{
+  background-color: green;
+}
+
+.card.wrong{
+  background-color: red;
+}
+
+.card.active img,
+.card.correct img,
+.card.wrong img {
+  transform: scale(1); 
+}

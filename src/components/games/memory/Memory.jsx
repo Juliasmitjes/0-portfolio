@@ -84,16 +84,20 @@ function handleClick(id) {
   }
 }
 
-  return (<div className="container">   
-  {items.map((item, index) => (
-    <Card 
-    key={index} 
-    item={item} 
-    id={index} 
-    handleClick={handleClick}
-    />
-  ))}
-    </div>)
-}
+  return (<div className="bg-myDark">
+    <div className="justify-items-center bg-myWarm py-10 mx-6">
+      <div className="grid grid-cols-4 grid-rows-4 h-100 w-100 gap-2 items-center">   
+        {items.map((item, index) => (
+        <Card 
+        key={index} 
+        item={item} 
+        id={index} 
+        handleClick={handleClick}
+        />
+      ))}
+      </div>
+   </div>
+</div>
+)}
 
 export default Memory;

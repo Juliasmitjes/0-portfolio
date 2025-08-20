@@ -1,9 +1,11 @@
+import { HashLink } from 'react-router-hash-link';
+
 'use client' 
 
 const navLinks = [
-  { name: 'About me', href: '#' },
-  { name: 'Resume', href: '#resume-section' },
-  { name: 'Projects', href: '#projects-section' },
+  { name: 'About me', href: '/#' },
+  { name: 'Resume', href: '/#resume-section' },
+  { name: 'Projects', href: '/#projects-section' },
 ]
 
 const Header = () => {
@@ -17,12 +19,12 @@ const Header = () => {
           <ul className="hidden md:flex items-center space-x-8">
             {navLinks.map(link => (
               <li key={link.name}>
-                <a
-                  href={link.href}
+                <HashLink
+                  to={link.href}
                   className="px-3 py-2 text-myDark text-lg font-myText hover:text-myBlue"
                 >
                   {link.name}
-                </a>
+                </HashLink>
               </li>
             ))}
           </ul>

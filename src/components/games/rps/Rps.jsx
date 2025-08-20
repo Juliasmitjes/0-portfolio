@@ -92,7 +92,7 @@ function Rps() {
   return (
     <div className="bg-myDark">
       <div className="justify-items-center bg-myWarm mx-6">
-      <h1 className="text-4xl font-myHeader text-myBlue pb-8">Rock paper siccors</h1>
+      <h1 className="text-4xl font-myHeader text-myBlue pb-8 pt-8 ">Rock paper siccors</h1>
       <div>
         <div className="flex items-center justify-center pb-4">
           <Player name="player" score={playerScore} action={playerAction}/>          

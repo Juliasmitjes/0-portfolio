@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const navLinks = [
   { name: 'Memory', href: '/memory' },
   { name: 'Rps', href: '/rps' },
-  { name: '', href: '#' },
+  { name: 'Tictactoe', href: '/tictactoe' },
 ]
 
 const Projects = () => (
@@ -49,7 +49,7 @@ const Projects = () => (
               className="w-40 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
             />
           </a>
-          <a href="#tictactoe">
+          <a href="/tictactoe">
             <img
               src="/images/closedRound.png"
               alt="Tic tac toe"

@@ -8,6 +8,7 @@ import Resume from "./pages/Resume.jsx";
 import Weather from './components/Weather.jsx'
 import Memory from './components/games/memory/Memory.jsx';
 import Rps from './components/games/rps/Rps.jsx';
+import Tictactoe from './components/games/tictactoe/Tictactoe.jsx';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="Weather" element={<Weather />} />
         <Route path="Memory" element={<Memory />} />
         <Route path="Rps" element={<Rps />} />
+        <Route path="Tictactoe" element={<Tictactoe />} />
       </Route>
     </Routes>
   )

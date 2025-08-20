@@ -55,6 +55,11 @@ function check(current) {
     setItems(newItems);
     setPrev(-1);
     setDisabled(false);
+
+    if (newItems.every(card => card.stat === "correct")) {
+      alert("Well done! Let’s see if you can do it again. Up for another?");
+    }
+
   } else {
     newItems[current] = { ...newItems[current], stat: "wrong" };
     newItems[prev] = { ...newItems[prev], stat: "wrong" };
@@ -87,8 +92,9 @@ function handleClick(id) {
     setDisabled(true); 
     setTimeout(() => {
       check(id);
-    }, 500);
-  }
+    }, 500); 
+  } 
+
 }
 
   return (<div className="bg-myDark">

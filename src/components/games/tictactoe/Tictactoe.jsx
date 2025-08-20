@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function Square({ value, onSquareClick }) {
   return (
-    <button className="border border-solid p-6 bg-blue-500 text-white" onClick={onSquareClick}>
+    <button className="border border-solid p-6 rounded-lg bg-myDark text-white" onClick={onSquareClick}>
       {value}
     </button>
   );
@@ -32,8 +32,8 @@ function Board({ xIsNext, squares, onPlay }) {
 
   return (
     <>
-     <div className="h-screen flex items-center justify-center flex-col">
-       <div className="status">{status}</div>
+     <div className="my-8 flex items-center justify-center flex-col">
+       <div className="pb-8">{status}</div>
       <div className="grid grid-cols-3 w-xs h-[100px]">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -67,34 +67,16 @@ const Tictactoe = () => {
     setCurrentMove(nextHistory.length - 1);
   }
 
-  function jumpTo(nextMove) {
-    setCurrentMove(nextMove);
-  }
-
-  const moves = history.map((squares, move) => {
-    let description;
-    if (move > 0) {
-      description = 'Go to move #' + move;
-    } else {
-      description = 'Go to game start';
-    }
-    return (
-      <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
-      </li>
-    );
-  });
+  
 
   return (
-     <div className="h-screen flex items-center justify-center flex-col">
-    <div className="game-info mt-4 p-4 bg-gray-100 rounded w-full max-w-md">
-      <ol>{moves}</ol>
-    </div>
-    <div className="game-board">
+    <div className="bg-myDark">
+      <div className="bg-myWarm mx-6 flex items-center justify-center flex-col">
+    <div className="text-4xl font-myHeader text-myBlue">
       <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
     </div>
   </div>
-
+</div>
   );
 }
 

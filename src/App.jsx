@@ -6,6 +6,8 @@ import Contact from './pages/Contact.jsx';
 import NoPage from "./pages/NoPage";
 import Resume from "./pages/Resume.jsx";
 import Weather from './components/Weather.jsx'
+import Memory from './components/games/memory/Memory.jsx';
+
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
         <Route path="*" element={<NoPage />} />
         <Route path="Resume" element={<Resume />} />
         <Route path="Weather" element={<Weather />} />
+        <Route path="Memory" element={<Memory />} />
       </Route>
     </Routes>
   )

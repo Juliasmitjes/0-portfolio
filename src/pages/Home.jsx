@@ -6,7 +6,7 @@ import Projects from './Projects.jsx';
 const Home = () => {
   return (
     <div className="bg-myDark">
-      <div className="bg-myWarm pt-16 mx-4">
+      <div className="bg-myWarm pt-16 mx-6">
 
       <div className="flex flex-col items-center">
          <h1 className="text-[80px] font-myHeader text-myBlue">
@@ -44,13 +44,7 @@ const Home = () => {
       <Projects />
     </div>
   </div>    
-
-
-
-
-
-    </div>
-    
+</div>
   )
 }
 

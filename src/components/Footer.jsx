@@ -5,8 +5,8 @@ import { MdAlternateEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="bg-myDark pb-4 ">
-    <footer className="bg-myWarm md:flex md:items-center md:justify-between p-4 md:p-6 xl:p-8 mx-4">
+    <div className="bg-myDark pb-6 ">
+    <footer className="bg-myWarm md:flex md:items-center md:justify-between p-4 md:p-6 xl:p-8 mx-6">
         <ul className="flex items-center flex-wrap mb-6 md:mb-0">
             <li><a href="#" className="text-myDark font-myText hover:text-myBlue text-lg ml-10 mr-4 md:mr-6">Julia Smitjes</a></li>
         </ul>

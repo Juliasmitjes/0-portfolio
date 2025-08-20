@@ -8,11 +8,10 @@ const navLinks = [
 
 const Header = () => {
   return (
-    <div className="bg-myDark pt-4">
-      <nav className="bg-myWarm md:flex md:items-center md:justify-end p-4 md:p-6 xl:p-8 mx-4">      
+    <div className="bg-myDark pt-6">
+      <nav className="bg-myWarm md:flex md:items-center md:justify-end p-4 md:p-6 xl:p-8 mx-6">      
       <div className="flex items-center flex-wrap">
-
-        {/* nav-links, knop en hamburger rechts*/}
+        
         <div className="flex items-center space-x-4">
           
           <ul className="hidden md:flex items-center space-x-8">

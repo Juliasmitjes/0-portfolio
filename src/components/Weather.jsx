@@ -2,12 +2,12 @@ import { useState, useRef, useEffect } from 'react'
 import { WiHumidity } from "react-icons/wi";
 import { FaWind, FaInfoCircle } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
-import cloudy from '../images/cloudy.png';
-import rain from '../images/rain.png';
-import snow from '../images/snow.png';
-import sun from '../images/sun.png'; 
-import thunder from '../images/thunder.png';
-import mist from '../images/mist.png';
+import cloudy from '../images/weather/cloudy.png';
+import rain from '../images/weather/rain.png';
+import snow from '../images/weather/snow.png';
+import sun from '../images/weather/sun.png'; 
+import thunder from '../images/weather/thunder.png';
+import mist from '../images/weather/mist.png';
 
 
 const Weather = () => {

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Memory', href: '/memory' },
-  { name: '', href: '#' },
+  { name: 'Rps', href: '/rps' },
   { name: '', href: '#' },
 ]
 
@@ -42,7 +42,7 @@ const Projects = () => (
               className="w-40 cursor-pointer translate-y-6 transition-transform duration-300 ease-in-out hover:scale-110"
             />
           </Link>
-          <a href="#rps">
+          <a href="/rps">
             <img
               src="/images/closedRound.png"
               alt="Rock paper scissors"

@@ -99,11 +99,11 @@ const Weather = () => {
 
         <button
           type="button"
-          className="absolute top-0 right-2 scale-150 text-myDark cursor-pointer hover:text-myBlue" 
+          className="absolute top-2 right-2 scale-150 text-myDark cursor-pointer hover:text-myBlue" 
           onClick={() => setErrorMessage("")}
         >
           <span className="sr-only">Close</span>
-          <FaTimes size={20} />
+          <FaTimes size={9} />
         </button>
       </div>
     )}

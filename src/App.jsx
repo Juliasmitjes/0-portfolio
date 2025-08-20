@@ -7,7 +7,7 @@ import NoPage from "./pages/NoPage";
 import Resume from "./pages/Resume.jsx";
 import Weather from './components/Weather.jsx'
 import Memory from './components/games/memory/Memory.jsx';
-
+import Rps from './components/games/rps/Rps.jsx';
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
         <Route path="Resume" element={<Resume />} />
         <Route path="Weather" element={<Weather />} />
         <Route path="Memory" element={<Memory />} />
+        <Route path="Rps" element={<Rps />} />
       </Route>
     </Routes>
   )

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { GiPodiumWinner } from "react-icons/gi";
 import Card from './Card.jsx';
 import avocado from '../../../images/memory/avocado.png';
 import bee from '../../../images/memory/bee.png';
@@ -32,6 +33,7 @@ function Memory(){
 
   const [prev, setPrev] = useState(-1);
   const [disabled, setDisabled] = useState(false);
+  const [endMessage, setEndMessage] = useState("");
 
   useEffect(() => {
   const revealedItems = items.map(item => ({ ...item, stat: "active" }));
@@ -56,10 +58,9 @@ function check(current) {
     setPrev(-1);
     setDisabled(false);
 
-    if (newItems.every(card => card.stat === "correct")) {
-      alert("Well done! Let’s see if you can do it again. Up for another?");
+     if (newItems.every(card => card.stat === "correct")) {
+      setEndMessage("Well done! Let’s see if you can do it again. Up for another?");
     }
-
   } else {
     newItems[current] = { ...newItems[current], stat: "wrong" };
     newItems[prev] = { ...newItems[prev], stat: "wrong" };
@@ -97,10 +98,40 @@ function handleClick(id) {
 
 }
 
-  return (<div className="bg-myDark">
-    <div className="justify-items-center bg-myWarm py-10 mx-6">
-      <p className="text-4xl font-myHeader text-myBlue pb-8">Memory</p>
-      <div className="grid grid-cols-4 grid-rows-4 h-100 w-100 gap-2 items-center">   
+  return ( 
+<div className="relative bg-myDark">  
+  <div className="bg-myWarm mx-6 flex flex-col items-center">
+     <p className="text-4xl font-myHeader text-myBlue pb-8">Memory</p>
+    {endMessage && (
+      <div
+        className="absolute inset-0 flex items-center justify-center z-10"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div className="bg-white p-6 rounded-lg text-center shadow-lg">
+          <GiPodiumWinner className="mx-auto mb-2 text-5xl font-myText text-myOcean" />
+          <p className="mb-6 text-lg font-myText text-myOcean">{endMessage}</p>
+          <button
+            className="px-4 py-2 bg-myOcean font-myText font-bold text-white rounded cursor-pointer"
+            onClick={() => {
+              setEndMessage("");         
+              window.location.reload();   
+            }}
+          >
+            Play again
+          </button>
+            <button
+        type="button"
+        className="absolute top-2 right-2 text-myOcean hover:text-red-500 text-2xl"
+        onClick={() => setEndMessage("")}
+      >
+        <span className="sr-only">Close</span>
+        &times;
+      </button>
+        </div>
+      </div>
+    )}
+      <div className="grid grid-cols-4 grid-rows-4 h-100 w-100 gap-2">   
         {items.map((item, index) => (
         <Card 
         key={index} 
@@ -110,7 +141,7 @@ function handleClick(id) {
         />
       ))}
       </div>
-   </div>
+  </div>  
 </div>
 )}
 

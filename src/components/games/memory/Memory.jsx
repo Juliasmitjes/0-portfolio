@@ -93,6 +93,7 @@ function handleClick(id) {
 
   return (<div className="bg-myDark">
     <div className="justify-items-center bg-myWarm py-10 mx-6">
+      <p className="text-4xl font-myHeader text-myBlue pb-8">Memory</p>
       <div className="grid grid-cols-4 grid-rows-4 h-100 w-100 gap-2 items-center">   
         {items.map((item, index) => (
         <Card 

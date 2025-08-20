@@ -14,11 +14,11 @@
 }
 
 .card.correct{
-  background-color: #97B067; 
+  border: 6px solid #B6F500;
 }
 
 .card.wrong{
-  background-color: #FB4141;
+  border: 6px solid #FB4141;
 }
 
 .card.active img,

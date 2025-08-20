@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { GiPodiumWinner } from "react-icons/gi";
+import { FaTimes } from "react-icons/fa";
 import Card from './Card.jsx';
 import avocado from '../../../images/memory/avocado.png';
 import bee from '../../../images/memory/bee.png';
@@ -102,17 +103,28 @@ function handleClick(id) {
 <div className="relative bg-myDark">  
   <div className="bg-myWarm mx-6 flex flex-col items-center">
      <p className="text-4xl font-myHeader text-myBlue pb-8">Memory</p>
+
     {endMessage && (
       <div
-        className="absolute inset-0 flex items-center justify-center z-10"
+        className="absolute inset-0 flex items-center justify-center z-20"
         role="dialog"
         aria-modal="true"
       >
-        <div className="bg-white p-6 rounded-lg text-center shadow-lg">
-          <GiPodiumWinner className="mx-auto mb-2 text-5xl font-myText text-myOcean" />
+        <div className="relative bg-white p-6 rounded-lg text-center shadow-lg">
+          <button
+          type="button"
+          aria-label="Close"
+          className="absolute top-2 right-2 text-myBlue cursor-pointer hover:text-myDark text-3xl"
+          onClick={() => setEndMessage("")}
+            >
+          <span className="sr-only">Close</span>
+          <FaTimes size={20} />
+          </button>
+
+          <GiPodiumWinner className="mx-auto mb-2 text-5xl font-myText text-myBlue" />
           <p className="mb-6 text-lg font-myText text-myOcean">{endMessage}</p>
           <button
-            className="px-4 py-2 bg-myOcean font-myText font-bold text-white rounded cursor-pointer"
+            className="px-4 py-2 bg-myBlue font-myText font-bold text-white rounded hover:bg-myDark cursor-pointer"
             onClick={() => {
               setEndMessage("");         
               window.location.reload();   
@@ -120,14 +132,7 @@ function handleClick(id) {
           >
             Play again
           </button>
-            <button
-        type="button"
-        className="absolute top-2 right-2 text-myOcean hover:text-red-500 text-2xl"
-        onClick={() => setEndMessage("")}
-      >
-        <span className="sr-only">Close</span>
-        &times;
-      </button>
+            
         </div>
       </div>
     )}

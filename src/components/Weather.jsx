@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { WiHumidity } from "react-icons/wi";
-import { FaWind, FaInfoCircle } from "react-icons/fa";
+import { FaWind, FaInfoCircle, FaTimes } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import cloudy from '../images/weather/cloudy.png';
 import rain from '../images/weather/rain.png';
@@ -103,7 +103,7 @@ const Weather = () => {
           onClick={() => setErrorMessage("")}
         >
           <span className="sr-only">Close</span>
-          &times;
+          <FaTimes size={20} />
         </button>
       </div>
     )}

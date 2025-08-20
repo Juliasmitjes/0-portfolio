@@ -31,6 +31,7 @@ function Memory(){
   ].sort(() => Math.random() - 0.5));
 
   const [prev, setPrev] = useState(-1);
+  const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
   const revealedItems = items.map(item => ({ ...item, stat: "active" }));
@@ -53,6 +54,7 @@ function check(current) {
     newItems[prev] = { ...newItems[prev], stat: "correct" };
     setItems(newItems);
     setPrev(-1);
+    setDisabled(false);
   } else {
     newItems[current] = { ...newItems[current], stat: "wrong" };
     newItems[prev] = { ...newItems[prev], stat: "wrong" };
@@ -66,21 +68,26 @@ function check(current) {
         return updatedItems;
       });
       setPrev(-1);
+      setDisabled(false);
     }, 1000); // 
   }
 }
 
 function handleClick(id) {
+  if (disabled) return;
   if (items[id].stat === "correct" || items[id].stat === "wrong") return; 
 
+  const newItems = [...items];
+  newItems[id] = { ...newItems[id], stat: "active" };
+  setItems(newItems);
+
   if (prev === -1) {
-    items[id].stat = "active";
-    setItems([...items]);
     setPrev(id);
   } else {
-    items[id].stat = "active";
-    setItems([...items]);
-    setTimeout(() => check(id), 500); 
+    setDisabled(true); 
+    setTimeout(() => {
+      check(id);
+    }, 500);
   }
 }
 

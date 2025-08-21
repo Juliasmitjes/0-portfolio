@@ -49,7 +49,7 @@ const Home = () => {
       <Projects />
     </div>
       <div>
-        <div className="flex flex-col place-items-center justify-center bg-myWarm pt-15 mx-4">
+        <div className="flex flex-col place-items-center justify-center bg-myWarm pt-20 mx-4">
         <h1 className="text-4xl font-myHeader text-myBlue pb-8">
           Contact
         </h1>

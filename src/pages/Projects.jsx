@@ -71,7 +71,7 @@ const Projects = () => (
           <Link to="/tictactoe">
           <div className="cursor-pointer group text-center">
             <span 
-                className="block mb-5 text-myDark text-xl translate-y-20 font-myHeader opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="block mb-4 text-myDark text-xl translate-y-20 font-myHeader opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
                 Tic tac toe
               </span>

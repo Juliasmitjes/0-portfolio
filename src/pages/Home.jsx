@@ -43,6 +43,22 @@ const Home = () => {
     <div id="projects-section" >
       <Projects />
     </div>
+      <div>
+        <div className="flex flex-col place-items-center justify-center bg-myWarm pt-15 mx-4">
+        <h1 className="text-4xl font-myHeader text-myBlue pb-8">
+          Contact
+        </h1>
+        <p className="text-2xl font-myText text-myOcean pb-8 max-w-lg text-center">
+          Let’s talk. I’d love to hear from you.
+        </p>
+        <button
+            type="button"
+            className="hidden md:inline-flex items-center font-myText px-4 py-2 bg-myBlue text-white rounded-lg text-lg cursor-pointer font-bold hover:bg-myDark focus:outline-none focus:ring-2 focus:ring-blue-300 mb-6"
+          >
+            Get in touch
+          </button>
+      </div>
+    </div>
   </div>    
 </div>
   )

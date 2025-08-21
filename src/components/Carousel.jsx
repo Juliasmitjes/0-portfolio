@@ -6,17 +6,16 @@ const slides = [
     <div>
       <h1 className="mb-3 text-4xl font-myHeader text-myBlue">Education</h1>
       <p className="text-2xl font-myText text-myOcean font-semibold">
-        MSc International Management
-        <p className="font-normal">
+        MSc International Management</p>
+        <p className="text-2xl font-myText text-myOcean font-normal">
         strong focus on Econometrics
         <br />
         <br />
         Utrecht University  
         </p>
-        <p className="font-semibold">
+        <p className="text-2xl font-myText text-myOcean font-semibold">
         Awarded Cum Laude
         </p>
-      </p>
     </div>
   ),
   (

@@ -12,15 +12,13 @@ function Square({ value, onSquareClick }) {
 
 function Board({ xIsNext, squares, onPlay, endMessage, setEndMessage }) {
 
-  const result = calculateWinner(squares, setEndMessage);
-
   useEffect(() => {
     const result = calculateWinner(squares, setEndMessage);
     if (result === 'draw') {
-      setEndMessage("It's a tie! Would you like to play again?");
+      setEndMessage("It's a tie! Another round?");
     }
     else if (result === 'X' || result === 'O') {
-      setEndMessage(`The winner is player ${result}. Would you like to play again?`);
+      setEndMessage(`The winner is player ${result}. Another round?`);
     }
   }, [squares, setEndMessage]);
 
@@ -31,14 +29,6 @@ function Board({ xIsNext, squares, onPlay, endMessage, setEndMessage }) {
     const nextSquares = squares.slice();
     nextSquares[i] = xIsNext ? 'X' : 'O';
     onPlay(nextSquares);
-
-    const result = getResult(nextSquares);
-    if (result === 'draw') {
-      setEndMessage("Geen winnaar dit keer, het is gelijkspel! Nog een potje?");
-    }
-    else if (result === 'X' || result === 'O') {
-      setEndMessage(`The winner is player ${result}. Would you like to play again?`);
-    }
   }
 
   const winner = calculateWinner(squares, setEndMessage);

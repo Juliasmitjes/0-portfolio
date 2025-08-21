@@ -34,28 +34,54 @@ const Projects = () => (
 
    
     <div className="flex flex-col items-start">
-        <div className="flex justify-around items-end w-full h-76 gap-8">
+        <div className="flex justify-around items-end w-full h-76 gap-10">
+
           <Link to="/memory">
-            <img
-              src="/images/memory.png"
-              alt="Memory"
-              className="w-40 cursor-pointer translate-y-6 transition-transform duration-300 ease-in-out hover:scale-110 hover:opacity-75"
-            />
+            <div className="w-40 cursor-pointer group text-center">
+              <span 
+                className="block mb-5 text-myDark text-xl translate-y-6 font-myHeader opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                Memory
+              </span>
+              <img 
+                src="/images/memory.png" 
+                alt="Memory" 
+                className="w-full translate-y-6 transition-transform duration-300 ease-in-out group-hover:scale-110"
+              />
+            </div>
           </Link>
-          <a href="/rps">
+
+          <Link to="/rps">
+            <div className="w-40 cursor-pointer group text-center">
+             <span 
+              className="block mb-2 text-myDark text-xl font-myHeader opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap tracking-tight"
+            >
+              Rock paper scissors
+            </span>
             <img
               src="/images/rps.png"
               alt="Rock paper scissors"
-              className="w-40 cursor-pointer transition-transform mr-4 duration-300 ease-in-out hover:scale-110"
+              className="w-full cursor-pointer transition-transform mr-4 duration-300 ease-in-out group-hover:scale-110"
             />
-          </a>
-          <a href="/tictactoe">
+            </div>
+          </Link>
+
+
+
+          <Link to="/tictactoe">
+          <div className="cursor-pointer group text-center">
+            <span 
+                className="block mb-5 text-myDark text-xl translate-y-20 font-myHeader opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                Tic tac toe
+              </span>
             <img
               src="/images/tictactoe.png"
               alt="Tic tac toe"
-              className="w-40 cursor-pointer translate-y-20 mr-10 transition-transform duration-300 ease-in-out hover:scale-110"
+              className="w-full cursor-pointer translate-y-20 mr-10 transition-transform duration-300 ease-in-out group-hover:scale-110"
             />
-          </a>
+            </div>
+          </Link>
         </div>
 
         <div className="flex items-center mt-25 ml-7">

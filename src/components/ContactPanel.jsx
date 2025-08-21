@@ -1,15 +1,40 @@
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 const ContactPanel = ({ onClose }) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_0kf03ig', 'template_4n72uao', form.current, {
+        publicKey: 'SmhOnVEe_yGsYJZoZ',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <div className="fixed inset-y-0 right-0 max-w-md w-full bg-myBlue p-6 shadow-xl z-50 transition-transform duration-300">
       <button onClick={onClose} className="absolute top-4 right-4 cursor-pointer text-white font-bold">✕</button>
       <h2 className="text-lg font-myHeader text-white mb-4">Contact me</h2>
-      <form className="space-y-4">
-        <input type="text" placeholder="Name" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" />
-        <input type="email" placeholder="Email" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" />
-        <textarea placeholder="Message" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" rows="5" />
-        <button type="submit" className="font-myText font-bold cursor-pointer text-white bg-myOcean px-4 py-2 rounded hover:bg-myDark">
-          Submit
-        </button>
+
+      <form ref={form} onSubmit={sendEmail} className="space-y-4">
+        <input type="text" name="user_name" placeholder="Name" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" />
+
+        <input type="email" name="user_email" placeholder="Email" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" />
+        
+        <textarea name="message" placeholder="Message" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" rows="5" />
+
+        <input type="submit" value="Submit" className="font-myText font-bold cursor-pointer text-white bg-myOcean px-4 py-2 rounded hover:bg-myDark"/>
+
       </form>
     </div>
   );

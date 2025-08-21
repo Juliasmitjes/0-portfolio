@@ -1,27 +1,44 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { GiPodiumWinner } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
 
 function Square({ value, onSquareClick }) {
   return (
-    <button className="border border-solid p-6 rounded-lg bg-myDark text-white" onClick={onSquareClick}>
+    <button className="border border-solid p-6 rounded-lg bg-myDark cursor-pointer text-white" onClick={onSquareClick}>
       {value}
     </button>
   );
 }
 
 function Board({ xIsNext, squares, onPlay, endMessage, setEndMessage }) {
+
+  const result = calculateWinner(squares, setEndMessage);
+
+  useEffect(() => {
+    const result = calculateWinner(squares, setEndMessage);
+    if (result === 'draw') {
+      setEndMessage("It's a tie! Would you like to play again?");
+    }
+    else if (result === 'X' || result === 'O') {
+      setEndMessage(`The winner is player ${result}. Would you like to play again?`);
+    }
+  }, [squares, setEndMessage]);
+
+
   function handleClick(i) {
-    if (calculateWinner(squares) || squares[i]) {
-      return;
-    }
+    if (calculateWinner(squares) || squares[i]) return;
+
     const nextSquares = squares.slice();
-    if (xIsNext) {
-      nextSquares[i] = 'X';
-    } else {
-      nextSquares[i] = 'O';
-    }
+    nextSquares[i] = xIsNext ? 'X' : 'O';
     onPlay(nextSquares);
+
+    const result = getResult(nextSquares);
+    if (result === 'draw') {
+      setEndMessage("Geen winnaar dit keer, het is gelijkspel! Nog een potje?");
+    }
+    else if (result === 'X' || result === 'O') {
+      setEndMessage(`The winner is player ${result}. Would you like to play again?`);
+    }
   }
 
   const winner = calculateWinner(squares, setEndMessage);
@@ -32,8 +49,6 @@ function Board({ xIsNext, squares, onPlay, endMessage, setEndMessage }) {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
   }
 
-  
-
   return (
     <>
     {endMessage && (
@@ -42,7 +57,7 @@ function Board({ xIsNext, squares, onPlay, endMessage, setEndMessage }) {
             role="dialog"
             aria-modal="true"
           >
-            <div className="relative bg-white p-6 rounded-lg text-center shadow-lg">
+            <div className="relative bg-white p-6 w-lg rounded-lg text-center shadow-lg">
               <button
               type="button"
               aria-label="Close"
@@ -56,12 +71,12 @@ function Board({ xIsNext, squares, onPlay, endMessage, setEndMessage }) {
               <GiPodiumWinner className="mx-auto mb-2 text-5xl font-myText text-myBlue" />
               <p className="mb-6 text-lg font-myText text-myOcean">{endMessage}</p>
               <button
-                className="px-4 py-2 bg-myBlue font-myText font-bold text-white rounded hover:bg-myDark cursor-pointer"
+                className="px-4 py-2 bg-myBlue font-myText text-lg font-bold text-white rounded hover:bg-myDark cursor-pointer"
                 onClick={() => {
                   setEndMessage("");         
                   window.location.reload();   
                 }}
-              >
+                >
                 Play again
               </button>
             </div>
@@ -137,7 +152,10 @@ function calculateWinner(squares, setEndMessage) {
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       setEndMessage(`The winner is player ${squares[a]}. Would you like to play again?`);
       return squares[a];
-    }
+    } 
+  } 
+  if (squares.every(square => square !== null)) {
+    return 'draw';
   }
   return null;
 }

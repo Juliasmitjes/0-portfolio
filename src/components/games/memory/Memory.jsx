@@ -110,7 +110,7 @@ function handleClick(id) {
         role="dialog"
         aria-modal="true"
       >
-        <div className="relative bg-white p-6 rounded-lg text-center shadow-lg">
+        <div className="relative bg-white w-lg p-6 rounded-lg text-center shadow-lg">
           <button
           type="button"
           aria-label="Close"

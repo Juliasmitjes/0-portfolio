@@ -1,5 +1,7 @@
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdAlternateEmail } from "react-icons/md";
 
 const ContactPanel = ({ onClose }) => {
   const form = useRef();
@@ -36,6 +38,19 @@ const ContactPanel = ({ onClose }) => {
         <input type="submit" value="Submit" className="font-myText font-bold cursor-pointer text-white bg-myOcean px-4 py-2 rounded hover:bg-myDark"/>
 
       </form>
+      <div className="flex items-center pt-8 space-x-2">
+        <a href="mailto:julia.s@live.nl" className="text-myOcean hover:text-myDark">
+          <MdAlternateEmail className="text-2xl" />
+        </a>
+        <p className="font-myText text-myDark">julia.s@live.nl</p>
+      </div>
+
+      <div className="flex items-center pt-2 space-x-2 mt-2">
+        <a href="tel:+31614292489" className="text-myOcean hover:text-myDark">
+          <FaPhoneAlt className="text-xl" />
+        </a>
+        <p className="font-myText text-myDark">+316 14292489</p>
+      </div>
     </div>
   );
 };

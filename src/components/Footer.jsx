@@ -26,17 +26,17 @@ const Footer = () => {
         ))}
      </ul>
         <div className="flex sm:justify-center space-x-6 mr-10">
-            <a href="#" className="text-myDark font-myText hover:text-myBlue">
+            <a href="https://github.com/Juliasmitjes" className="text-myDark font-myText hover:text-myBlue">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <FaGithub className="text-2xl"/>
                 </svg>
             </a>
-            <a href="#" className="text-myDark font-myText hover:text-myBlue">
+            <a href="mailto:julia.s@live.nl" className="text-myDark font-myText hover:text-myBlue">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <MdAlternateEmail className="text-2xl"/>
                 </svg>
             </a>
-            <a href="#" className="text-myDark font-myText hover:text-myBlue">
+            <a href="tel:+31614292489" className="text-myDark font-myText hover:text-myBlue">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <FaPhoneAlt className="text-2xl"/>
                 </svg>

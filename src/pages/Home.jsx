@@ -20,13 +20,15 @@ const Home = () => {
       </p>
 
     <div className="relative inline-block">
-        <img className="h-100 object-scale-down" src="/images/JuliaSmitjesImage.jpeg" alt="Julia Smitjes" />
-        <div className="absolute bottom-0 -left-15 w-36 h-32">
-          <img src="/images/closedRound.png" alt="closed round"
+        <img className="h-100 object-scale-down rounded-lg " src="/images/JuliaSmitjesImage.jpeg" alt="Julia Smitjes" />
+        <div className="absolute bottom-0 -left-15 w-60 h-115">
+          <img src="/images/pen1.png" alt="closed round"
               className="absolute top-6 left-6 z-0" />
-          <img src="/images/openRound.png" alt="open round"
-            className="absolute top-0 left-0 z-10 rotate-[20deg]" />
         </div>
+        <div className="absolute bottom-0 -right-10 w-60 h-38">
+          <img src="/images/pen2.png" alt="open round"
+            className="absolute top-0 left-0 z-10 rotate-[20deg]" />
+      </div>
     </div>
   </div>   
     <div className="flex flex-col place-items-center justify-center bg-myWarm pt-15 mx-4">

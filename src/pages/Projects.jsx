@@ -20,11 +20,11 @@ const Projects = () => (
         <div className="flex flex-col items-center justify-center space-y-6">
           <div className="flex items-center">
             <img
-              src="/images/arrow.png"
+              src="/images/arrow1.png"
               alt="arrow"
               className="w-28 h-auto"
             />
-            <p className="ml-2 mb-10 text-2xl font-myText text-myOcean">
+            <p className="ml-4 mb-13 text-2xl font-myText text-myOcean">
               Curious about today's <br />
               weather?
             </p>
@@ -85,13 +85,13 @@ const Projects = () => (
         </div>
 
         <div className="flex items-center mt-25 ml-7">
-          <p className="text-2xl font-myText text-myOcean mt-25 pl-7">
+          <p className="text-2xl font-myText text-myOcean mt-20 pl-7">
             Or maybe you'd rather play a game?
           </p>
           <img 
             src="/images/arrow2.png" 
             alt="arrow" 
-            className="w-28 h-auto rotate-16" />
+            className="w-28 mt-6 h-auto rotate-4" />
         </div>
        </div>
       </div>

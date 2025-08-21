@@ -7,7 +7,7 @@ const ContactPanel = ({ onClose }) => {
         <input type="text" placeholder="Name" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" />
         <input type="email" placeholder="Email" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" />
         <textarea placeholder="Message" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" rows="5" />
-        <button type="submit" className="font-myText font-bold cursor-pointer text-white bg-myDark p-2 rounded">
+        <button type="submit" className="font-myText font-bold cursor-pointer text-white bg-myOcean px-4 py-2 rounded hover:bg-myDark">
           Submit
         </button>
       </form>

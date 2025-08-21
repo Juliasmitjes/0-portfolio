@@ -3,7 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 'use client' 
 
 const navLinks = [
-  { name: 'About me', href: '/#' },
+  { name: 'About me', href: '/#aboutme' },
   { name: 'Resume', href: '/#resume-section' },
   { name: 'Projects', href: '/#projects-section' },
 ]

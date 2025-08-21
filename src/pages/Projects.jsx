@@ -34,24 +34,24 @@ const Projects = () => (
 
    
     <div className="flex flex-col items-start">
-        <div className="flex justify-around items-end w-full h-76">
+        <div className="flex justify-around items-end w-full h-76 gap-8">
           <Link to="/memory">
             <img
-              src="/images/closedRound.png"
+              src="/images/memory.png"
               alt="Memory"
-              className="w-40 cursor-pointer translate-y-6 transition-transform duration-300 ease-in-out hover:scale-110"
+              className="w-40 cursor-pointer translate-y-6 transition-transform duration-300 ease-in-out hover:scale-110 hover:opacity-75"
             />
           </Link>
           <a href="/rps">
             <img
-              src="/images/closedRound.png"
+              src="/images/rps.png"
               alt="Rock paper scissors"
-              className="w-40 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
+              className="w-40 cursor-pointer transition-transform mr-4 duration-300 ease-in-out hover:scale-110"
             />
           </a>
           <a href="/tictactoe">
             <img
-              src="/images/closedRound.png"
+              src="/images/tictactoe.png"
               alt="Tic tac toe"
               className="w-40 cursor-pointer translate-y-20 mr-10 transition-transform duration-300 ease-in-out hover:scale-110"
             />

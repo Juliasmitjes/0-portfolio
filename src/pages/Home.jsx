@@ -1,9 +1,12 @@
 'use client' 
 
+import { useOutletContext } from 'react-router-dom';
 import Resume from './Resume.jsx'; 
 import Projects from './Projects.jsx';
 
 const Home = () => {
+  const { setShowContactForm } = useOutletContext();
+
   return (
     <div className="bg-myDark">
       <div className="bg-myWarm pt-16 mx-6">
@@ -53,10 +56,11 @@ const Home = () => {
         </p>
         <button
             type="button"
+            onClick={() => setShowContactForm(true)}
             className="hidden md:inline-flex items-center font-myText px-4 py-2 bg-myBlue text-white rounded-lg text-lg cursor-pointer font-bold hover:bg-myDark focus:outline-none focus:ring-2 focus:ring-blue-300 mb-6"
           >
             Get in touch
-          </button>
+       </button>
       </div>
     </div>
   </div>    

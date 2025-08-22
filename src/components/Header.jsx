@@ -1,4 +1,6 @@
 import { HashLink } from 'react-router-hash-link';
+import { useState, useEffect } from 'react';
+
 
 'use client' 
 
@@ -9,10 +11,25 @@ const navLinks = [
 ]
 
 const Header = ({setShowContactForm}) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10); 
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="bg-myDark pt-6">
-      <nav className="bg-myWarm md:flex md:items-center md:justify-end p-4 md:p-6 xl:p-8 mx-6">      
-      <div className="flex items-center flex-wrap">
+    <div className={`bg-myDark sticky top-0 z-50 transition-all duration-600 ${
+        scrolled ? 'opacity-80 pt-0 backdrop-blur-sm' : 'pt-6'}`}>
+
+    <nav className={`bg-myWarm md:flex md:items-center md:justify-end p-4 md:p-6 xl:p-8 mx-6 transition-all ${
+      scrolled ? 'border-b border-myDark backdrop-blur-sm' : ''}`}>
+
+    <div className="flex items-center flex-wrap">
         
         <div className="flex items-center space-x-4">
           

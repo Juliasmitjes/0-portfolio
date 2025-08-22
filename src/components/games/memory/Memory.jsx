@@ -100,8 +100,8 @@ function handleClick(id) {
 }
 
   return ( 
-<div className="relative bg-myDark">  
-  <div className="bg-myWarm mx-6 flex flex-col items-center">
+<div className="relative bg-myOcean">  
+  <div className="bg-myWarm mx-6 pb-10 flex flex-col items-center">
      <p className="text-4xl font-myHeader text-myBlue pb-8">Memory</p>
 
     {endMessage && (

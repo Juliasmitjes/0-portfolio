@@ -4,7 +4,7 @@ import { FaTimes } from "react-icons/fa";
 
 function Square({ value, onSquareClick }) {
   return (
-    <button className="border border-solid p-6 rounded-lg bg-myDark cursor-pointer text-white" onClick={onSquareClick}>
+    <button className="border border-solid p-6 rounded-lg bg-myOcean cursor-pointer text-white" onClick={onSquareClick}>
       {value}
     </button>
   );
@@ -109,8 +109,8 @@ const Tictactoe = () => {
     setCurrentMove(nextHistory.length - 1);
   }
   return (
-    <div className="bg-myDark">
-      <div className="bg-myWarm mx-6 flex items-center justify-center flex-col">
+    <div className="bg-myOcean">
+      <div className="bg-myWarm mx-6 pb-20 flex items-center justify-center flex-col">
     <div className="text-4xl font-myHeader text-myBlue">
       <Board 
       xIsNext={xIsNext} 

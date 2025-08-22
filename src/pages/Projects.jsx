@@ -36,9 +36,9 @@ const Projects = () => (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             <Link to="/memory">
-              <div className="h-90 flex flex-col p-4 bg-myOcean rounded-lg shadow-md cursor-pointer group">
+              <div className="h-90 flex flex-col p-4 bg-myWarm rounded-lg shadow-md cursor-pointer group transition-transform duration-300 ease-in-out hover:scale-110">
                 <div className="w-full text-center">
-                  <span className="block text-white text-lg font-myHeader opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="block h-8 text-myOcean text-lg font-myHeader opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Memory
                   </span>
                 </div>
@@ -46,16 +46,16 @@ const Projects = () => (
                   <img
                     src="images/memory.png"
                     alt="Memory"
-                    className="max-h-56 object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
+                    className="max-h-56 object-contain transition-transform duration-300 ease-in-out group-hover:scale-120"
                   />
                 </div>
               </div>
             </Link>
 
            <Link to="/rps">
-              <div className="h-90 flex flex-col p-4 bg-myOcean rounded-lg shadow-md cursor-pointer group">
+              <div className="h-90 flex flex-col p-4 bg-myWarm rounded-lg shadow-md cursor-pointer group transition-transform duration-300 ease-in-out hover:scale-110">
                 <div className="w-full text-center">
-                  <span className="block text-white text-lg font-myHeader opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="block h-8 text-myOcean text-lg font-myHeader opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Rock Paper Scissors
                   </span>
                 </div>
@@ -63,16 +63,16 @@ const Projects = () => (
                   <img
                     src="images/rps.png"
                     alt="Rock Paper Scissors"
-                    className="max-h-56 object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
+                    className="max-h-56 object-contain transition-transform duration-300 ease-in-out group-hover:scale-120"
                   />
                 </div>
               </div>
             </Link>
 
             <Link to="/tictactoe">
-              <div className="h-90 flex flex-col p-4 bg-myOcean rounded-lg shadow-md cursor-pointer group">
+              <div className="h-90 flex flex-col p-4 bg-myWarm rounded-lg shadow-md cursor-pointer group transition-transform duration-300 ease-in-out hover:scale-110">
                 <div className="w-full text-center">
-                  <span className="block text-white text-lg font-myHeader opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="block h-8 text-myOcean text-lg font-myHeader opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Tic Tac Toe
                   </span>
                 </div>
@@ -80,7 +80,7 @@ const Projects = () => (
                   <img
                     src="images/tictactoe.png"
                     alt="Tic Tac Toe"
-                    className="max-h-56 object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
+                    className="max-h-56 object-contain transition-transform duration-300 ease-in-out group-hover:scale-120"
                   />
                 </div>
               </div>

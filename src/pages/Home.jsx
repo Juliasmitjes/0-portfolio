@@ -28,12 +28,11 @@ const Home = () => {
             I light up around good ideas and great people. From debugging code to designing systems, I’m all about mixing tech with taste.
           </p>
           </div>
-        <div className="flex flex-col items-center bg-myOcean">
-          <div id="resume-section" className="w-2xl h-96 mb-54 scroll-mt-19">
-            <Resume />
-          </div>
-        </div>
-        
+          <div id="resume-section" className="scroll-mt-25 bg-myOcean py-10">
+            <div className="max-w-2xl mx-auto">
+              <Resume />
+            </div>
+          </div>        
         <div id="projects-section" >
           <Projects />
         </div>

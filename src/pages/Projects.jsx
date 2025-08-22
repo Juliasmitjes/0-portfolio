@@ -20,7 +20,7 @@ const Projects = () => (
         <div className="flex flex-col items-center justify-center space-y-6">
           <div className="flex items-center">
             <img
-              src="/images/arrow1.png"
+              src="images/arrow1.png"
               alt="arrow"
               className="w-28 h-auto"
             />
@@ -44,7 +44,7 @@ const Projects = () => (
                 Memory
               </span>
               <img 
-                src="/images/memory.png" 
+                src="images/memory.png" 
                 alt="Memory" 
                 className="w-full translate-y-6 transition-transform duration-300 ease-in-out group-hover:scale-110"
               />
@@ -59,7 +59,7 @@ const Projects = () => (
               Rock paper scissors
             </span>
             <img
-              src="/images/rps.png"
+              src="images/rps.png"
               alt="Rock paper scissors"
               className="w-full cursor-pointer transition-transform mr-4 duration-300 ease-in-out group-hover:scale-110"
             />
@@ -76,7 +76,7 @@ const Projects = () => (
                 Tic tac toe
               </span>
             <img
-              src="/images/tictactoe.png"
+              src="images/tictactoe.png"
               alt="Tic tac toe"
               className="w-full cursor-pointer translate-y-20 mr-10 transition-transform duration-300 ease-in-out group-hover:scale-110"
             />
@@ -89,7 +89,7 @@ const Projects = () => (
             Or maybe you'd rather play a game?
           </p>
           <img 
-            src="/images/arrow2.png" 
+            src="images/arrow2.png" 
             alt="arrow" 
             className="w-28 mt-6 h-auto rotate-4" />
         </div>

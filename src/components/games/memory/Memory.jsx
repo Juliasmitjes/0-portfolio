@@ -101,8 +101,8 @@ function handleClick(id) {
 
   return ( 
 <div className="relative bg-myOcean">  
-  <div className="bg-myWarm mx-6 pb-10 flex flex-col items-center">
-     <p className="text-4xl font-myHeader text-myBlue pb-8">Memory</p>
+  <div className="bg-myWarm sm:mx-6 pb-10 flex flex-col items-center">
+     <p className="text-2xl sm:text-4xl font-myHeader text-myBlue pb-8">Memory</p>
 
     {endMessage && (
       <div
@@ -114,7 +114,7 @@ function handleClick(id) {
           <button
           type="button"
           aria-label="Close"
-          className="absolute top-2 right-2 text-myBlue cursor-pointer hover:text-myDark text-3xl"
+          className="absolute top-2 right-2 text-myBlue cursor-pointer hover:text-myDark text-3xl active:scale-110 sm:active:scale-100"
           onClick={() => setEndMessage("")}
             >
           <span className="sr-only">Close</span>
@@ -124,7 +124,7 @@ function handleClick(id) {
           <GiPodiumWinner className="mx-auto mb-2 text-5xl font-myText text-myBlue" />
           <p className="mb-6 text-lg font-myText text-myOcean">{endMessage}</p>
           <button
-            className="px-4 py-2 bg-myBlue font-myText font-bold text-white rounded hover:bg-myDark cursor-pointer"
+            className="px-4 py-2 bg-myBlue font-myText font-bold text-white rounded hover:bg-myDark cursor-pointer active:scale-110 sm:active:scale-100"
             onClick={() => {
               setEndMessage("");         
               window.location.reload();   
@@ -136,7 +136,7 @@ function handleClick(id) {
         </div>
       </div>
     )}
-      <div className="grid grid-cols-4 grid-rows-4 h-100 w-100 gap-2">   
+      <div className="grid grid-cols-4 grid-rows-4 h-80 sm:h-100 w-80 sm:w-100 gap-2">   
         {items.map((item, index) => (
         <Card 
         key={index} 

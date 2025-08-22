@@ -61,7 +61,7 @@ function Board({ xIsNext, squares, onPlay, endMessage, setEndMessage }) {
               <GiPodiumWinner className="mx-auto mb-2 text-5xl font-myText text-myBlue" />
               <p className="mb-6 text-lg font-myText text-myOcean">{endMessage}</p>
               <button
-                className="px-4 py-2 bg-myBlue font-myText text-lg font-bold text-white rounded hover:bg-myDark cursor-pointer"
+                className="px-4 py-2 bg-myBlue font-myText text-lg font-bold text-white rounded hover:bg-myDark cursor-pointer active:scale-110 sm:active:scale-100"
                 onClick={() => {
                   setEndMessage("");         
                   window.location.reload();   
@@ -110,8 +110,8 @@ const Tictactoe = () => {
   }
   return (
     <div className="bg-myOcean">
-      <div className="bg-myWarm mx-6 pb-20 flex items-center justify-center flex-col">
-    <div className="text-4xl font-myHeader text-myBlue">
+      <div className="sm:bg-myWarm bg-white sm:mx-6 pb-20 flex items-center justify-center flex-col">
+    <div className="text-xl sm:text-4xl font-myHeader text-myBlue">
       <Board 
       xIsNext={xIsNext} 
       squares={currentSquares} 

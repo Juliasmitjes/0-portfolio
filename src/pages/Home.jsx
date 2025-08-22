@@ -47,7 +47,7 @@ const Home = () => {
             <button
                 type="button"
                 onClick={() => setShowContactForm(true)}
-                className="block w-full sm:w-auto md:inline-flex items-center font-myText px-4 py-2 bg-myBlue text-white sm:rounded-lg text-lg cursor-pointer font-bold hover:bg-myDark focus:outline-none focus:ring-2 focus:ring-blue-300 mb-6"
+                className="block w-full sm:w-auto md:inline-flex items-center font-myText px-4 py-2 bg-myBlue text-white sm:rounded-lg text-lg cursor-pointer font-bold hover:bg-myDark focus:outline-none focus:ring-2 focus:ring-blue-300 mb-6 active:scale-110 sm:active:scale-100"
               >
                 Get in touch
           </button>

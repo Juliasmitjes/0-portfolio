@@ -50,7 +50,7 @@ function Player({name = "player", score = 0, action="rock"}){
 
 function ActionButton({action = "rock", onActionSelected}){
   return(
-    <button className="justify-items-center w-20 h-20 cursor-pointer hover:text-myBlue " onClick={() => onActionSelected(action)}>
+    <button className="justify-items-center w-20 h-20 cursor-pointer hover:text-myBlue active:scale-110 sm:active:scale-100 " onClick={() => onActionSelected(action)}>
      <ActionIcon action={action} size={20}/>
     </button>
   )
@@ -63,7 +63,7 @@ function ShowWinner({winner = 0}){
     "1" : "You lose!",
   }
   return (
-    <h2 className="text-2xl font-myText text-myOcean">{text[winner]}</h2>
+    <h2 className="text-xl sm:text-2xl font-myText text-myOcean">{text[winner]}</h2>
   )
 }
 
@@ -90,23 +90,24 @@ function Rps() {
  }
 
   return (
-    <div className="bg-myOcean">
-      <div className="justify-items-center bg-myWarm mx-6 pb-20">
-      <h1 className="text-4xl font-myHeader text-myBlue pb-8 pt-8 ">Rock paper siccors</h1>
-      <div>
-        <div className="flex items-center justify-center pb-4">
-          <Player name="player" score={playerScore} action={playerAction}/>          
-          <Player name="Computer" score={computerScore} action={computerAction}/>
-        </div>
-        <div className="pb-8 text-myOcean">
-          <ActionButton action="rock" onActionSelected={onActionSelected}/>
-          <ActionButton action="paper" onActionSelected={onActionSelected}/>
-          <ActionButton action="scissors" onActionSelected={onActionSelected}/>
-        </div>
+<div className="flex flex-col">
+  <div className="justify-items-center w-full sm:w-auto sm:bg-myWarm sm:mx-6 sm:pb-20">
+    <h1 className="text-2xl sm:text-4xl font-myHeader text-myBlue pb-8 pt-10 sm:pt-8 ">Rock paper siccors</h1>
+    <div>
+      <div className="flex items-center justify-center pb-4">
+        <Player name="player" score={playerScore} action={playerAction}/>          
+        <Player name="Computer" score={computerScore} action={computerAction}/>
       </div>
-      <ShowWinner winner={winner}/>
+      <div className="pb-8 text-myOcean">
+        <ActionButton action="rock" onActionSelected={onActionSelected}/>
+        <ActionButton action="paper" onActionSelected={onActionSelected}/>
+        <ActionButton action="scissors" onActionSelected={onActionSelected}/>
+      </div>
     </div>
-   </div>
+    <ShowWinner winner={winner}/>
+  </div>
+</div>
+  
     
   )
 }

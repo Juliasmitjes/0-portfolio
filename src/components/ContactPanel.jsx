@@ -28,7 +28,7 @@ const ContactPanel = ({ onClose }) => {
 
   return (
     <div className="fixed inset-y-0 right-0 max-w-md w-full bg-myOcean p-6 shadow-xl z-50 transition-transform duration-300">
-      <button onClick={onClose} className="absolute top-4 right-4 cursor-pointer text-white font-bold">✕</button>
+      <button onClick={onClose} className="absolute top-4 right-4 cursor-pointer text-white font-bold active:scale-110 sm:active:scale-100">✕</button>
       <h2 className="text-xl font-myHeader text-white mb-4">Contact me</h2>
 
       <form ref={form} onSubmit={sendEmail} className="space-y-4">
@@ -38,7 +38,7 @@ const ContactPanel = ({ onClose }) => {
         
         <textarea name="message" placeholder="Message" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myBlue" rows="5" />
 
-        <input type="submit" value="Submit" className="font-myText font-bold cursor-pointer text-white bg-myBlue px-4 py-2 rounded hover:bg-myDark"/>
+        <input type="submit" value="Submit" className="font-myText font-bold cursor-pointer text-white bg-myBlue px-4 py-2 rounded hover:bg-myDark active:scale-110 sm:active:scale-100"/>
       </form>
 
       {showPopup && (

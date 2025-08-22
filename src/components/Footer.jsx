@@ -11,8 +11,8 @@ const navLinks = [
 const Footer = () => {
   return (
 <div className="bg-myOcean">
-    <footer className="bg-myOcean md:flex md:items-center md:justify-between px-10 py-6">
-     <ul className="flex items-center flex-wrap mb-6 md:mb-0">
+    <footer className="bg-myOcean md:flex md:items-center md:justify-between ml-3 sm:px-10 py-6">
+     <ul className="hidden sm:block flex items-center flex-wrap mb-6 md:mb-0">
         {navLinks.map((link, index) => (
             <li key={index}>
             <HashLink
@@ -24,7 +24,7 @@ const Footer = () => {
             </li>
         ))}
      </ul>
-        <div className="flex sm:justify-center space-x-6 mr-10">
+        <div className="flex sm:justify-center space-x-6 sm:mr-10">
             <a href="https://github.com/Juliasmitjes/0-portfolio" className="text-white font-myText hover:text-myDark">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <FaGithub className="text-2xl"/>

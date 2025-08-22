@@ -26,7 +26,7 @@ const Footer = () => {
         ))}
      </ul>
         <div className="flex sm:justify-center space-x-6 mr-10">
-            <a href="https://github.com/Juliasmitjes" className="text-myDark font-myText hover:text-myBlue">
+            <a href="https://github.com/Juliasmitjes/0-portfolio" className="text-myDark font-myText hover:text-myBlue">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <FaGithub className="text-2xl"/>
                 </svg>

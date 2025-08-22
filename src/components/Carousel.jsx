@@ -22,9 +22,7 @@ const slides = [
     <div>
       <h1 className="mb-3 text-4xl font-myHeader text-myBlue">Relevant experience</h1>
       <p className="text-2xl font-myText text-myOcean">
-        3+ years web design 
-        <br />
-        Programming training
+        3+ years experience in brand management, content creation, data analysis
       </p>
     </div>
   ),

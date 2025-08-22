@@ -23,7 +23,7 @@ const Header = ({setShowContactForm}) => {
   }, []);
 
   return (
-    <div className={`bg-myDark sticky top-0 z-50 transition-all duration-600 ${
+    <div className={`bg-myOcean sticky top-0 z-50 transition-all duration-600 ${
         scrolled ? 'opacity-80 pt-0 backdrop-blur-sm' : 'pt-6'}`}>
 
     <nav className={`bg-myWarm md:flex md:items-center md:justify-end py-4 px-8 mx-6 transition-all ${
@@ -38,7 +38,7 @@ const Header = ({setShowContactForm}) => {
               <li key={link.name}>
                 <HashLink
                   to={link.href}
-                  className="px-3 py-2 text-myDark text-lg font-myText hover:text-myBlue"
+                  className="px-3 py-2 text-myOcean text-lg font-myText hover:text-myBlue"
                 >
                   {link.name}
                 </HashLink>
@@ -48,7 +48,7 @@ const Header = ({setShowContactForm}) => {
           <button
             type="button"
             onClick={() => setShowContactForm(true)}
-            className="hidden ml-9 md:inline-flex items-center font-myText px-4 py-2 bg-myBlue text-white rounded-lg text-lg cursor-pointer font-bold hover:bg-myDark focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="hidden ml-9 md:inline-flex items-center font-myText px-4 py-2 bg-myOcean text-white rounded-lg text-lg cursor-pointer font-bold hover:bg-myDark focus:outline-none focus:ring-2 focus:ring-blue-300"
           >
             Contact
           </button>

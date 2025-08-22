@@ -58,7 +58,7 @@ const TextCarousel = () => {
    
       <button
         onClick={handlePrev}
-        className="px-4 py-2 bg-myBlue text-white rounded hover:bg-myOcean cursor-pointer"
+        className="px-4 py-2 bg-myOcean text-white rounded hover:bg-myDark cursor-pointer"
       >
         <FaArrowLeft />
       </button>
@@ -71,7 +71,7 @@ const TextCarousel = () => {
    
       <button
         onClick={handleNext}
-        className="px-4 py-2 bg-myBlue text-white rounded hover:bg-myOcean cursor-pointer"
+        className="px-4 py-2 bg-myOcean text-white rounded hover:bg-myDark cursor-pointer"
       >
     <FaArrowRight />
     </button>

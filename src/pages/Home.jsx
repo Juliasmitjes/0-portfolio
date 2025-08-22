@@ -8,7 +8,7 @@ const Home = () => {
   const { setShowContactForm } = useOutletContext();
 
   return (
-    <div id="aboutme" className="bg-myDark scroll-mt-0">
+    <div id="aboutme" className="bg-myOcean scroll-mt-0">
       <div className="bg-myWarm pt-18 mx-6">
 
       <div className="flex flex-col items-center">
@@ -39,21 +39,21 @@ const Home = () => {
         I light up around good ideas and great people. From debugging code to designing systems, I’m all about mixing tech with taste.
       </p>
       </div>
-    <div className="flex flex-col items-center">
-      <div id="resume-section" className="w-2xl h-96 mb-40 scroll-mt-15">
+    <div className="flex flex-col items-center bg-myBlue">
+      <div id="resume-section" className="w-2xl h-96 mb-54 scroll-mt-19">
         <Resume />
       </div>
     </div>
     
-    <div id="projects-section" className="scroll-mt-15" >
+    <div id="projects-section" >
       <Projects />
     </div>
       <div>
-        <div className="flex flex-col place-items-center justify-center bg-myWarm pt-20 mx-4">
+        <div className="flex flex-col place-items-center justify-center bg-myOcean pt-20">
         <h1 className="text-4xl font-myHeader text-myBlue pb-8">
           Contact
         </h1>
-        <p className="text-2xl font-myText text-myOcean font-bold pb-8 max-w-lg text-center">
+        <p className="text-2xl font-myText text-white font-bold pb-8 max-w-lg text-center">
           Let’s talk. I’d love to hear from you.
         </p>
         <button

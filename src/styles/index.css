@@ -4,10 +4,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-myWarm: #FFFBDE;
+  --color-myWarm: #F9FAF0;
   --color-myBlue: #91C8E4;
-  --color-myOcean: #749BC2;
-  --color-myDark: #4682A9; 
+  --color-myOcean: #4682A9;
+  --color-myDark: #769FCD; 
   --font-myHeader: 'Tilt Warp', sans-serif;
   --font-myText: 'Red Hat Text', sans-serif;
 }

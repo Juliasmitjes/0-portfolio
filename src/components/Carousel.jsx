@@ -4,38 +4,38 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const slides = [
   (
     <div>
-      <h1 className="mb-3 text-4xl font-myHeader text-myBlue">Education</h1>
-      <p className="text-2xl font-myText text-myOcean font-semibold">
+      <h1 className="mb-3 text-2xl sm:text-4xl font-myHeader text-myBlue">Education</h1>
+      <p className="text-lg sm:text-2xl font-myText text-white sm:text-myOcean font-semibold">
         MSc International Management</p>
-        <p className="text-2xl font-myText text-myOcean font-normal">
+        <p className="text-lg sm:text-2xl font-myText text-white sm:text-myOcean font-semibold sm:font-normal">
         strong focus on Econometrics
         <br />
         <br />
         Utrecht University  
         </p>
-        <p className="text-2xl font-myText text-myOcean font-semibold">
+        <p className="text-lg sm:text-2xl font-myText text-white sm:text-myOcean font-semibold">
         Awarded Cum Laude
         </p>
     </div>
   ),
   (
     <div>
-      <h1 className="mb-3 text-4xl font-myHeader text-myBlue">Relevant experience</h1>
-      <p className="text-2xl font-myText text-myOcean">
+      <h1 className="mb-3 text-2xl sm:text-4xl font-myHeader text-myBlue">Relevant experience</h1>
+      <p className="text-lg sm:text-2xl font-myText text-white sm:text-myOcean font-semibold sm:font-normal">
         3+ years experience in brand management, content creation, data analysis
       </p>
     </div>
   ),
   (
     <div>
-      <h1 className="mb-3 text-4xl font-myHeader text-myBlue">Proficient</h1>
-      <p className="text-2xl font-myText text-myOcean font-semibold"> Frontend webdevelopment </p>
-         <p className="text-2xl font-myText text-myOcean">
-          HTML, (Taiwlind) CSS, JavaScript, <br /> React + Vite
+      <h1 className="mb-1 sm:mb-3 text-2xl sm:text-4xl font-myHeader text-myBlue">Proficient</h1>
+      <p className="text-lg sm:text-2xl font-myText text-white sm:text-myOcean font-semibold"> Frontend webdevelopment </p>
+         <p className="hidden sm:block text-lg sm:text-2xl font-myText text-white sm:text-myOcean">
+          HTML, (Taiwlind) CSS, JavaScript, <sm:br /> React + Vite
           </p>
-          <h1 className="mb-3 text-4xl font-myHeader text-myBlue pt-6">Beginner</h1>
-         <p className="text-2xl font-myText text-myOcean font-semibold "> Backend webdevelopment </p>
-         <p className="text-2xl font-myText text-myOcean">
+          <h1 className="mb-1 sm:mb-3 text-2xl sm:text-4xl font-myHeader text-myBlue pt-3 sm:pt-6">Beginner</h1>
+         <p className="text-lg sm:text-2xl font-myText text-white sm:text-myOcean font-semibold "> Backend webdevelopment </p>
+         <p className="hidden sm:block text-lg sm:text-2xl font-myText text-white sm:text-myOcean">
           Node.js, Express.js, Git, PostgreSQL
           </p>
     </div>
@@ -54,24 +54,22 @@ const TextCarousel = () => {
   };
 
   return (
-    <div className="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg px-6 h-86 w-full">
+    <div className="flex items-center justify-between sm:bg-gray-50 sm:rounded-lg sm:shadow-lg px-2 sm:px-6 h-70 sm:h-86 w-full">
    
       <button
         onClick={handlePrev}
-        className="px-4 py-2 bg-myOcean text-white rounded hover:bg-myDark cursor-pointer"
+        className="px-3 sm:px-4 py-2 bg-myOcean text-white rounded hover:bg-myDark cursor-pointer"
       >
         <FaArrowLeft />
       </button>
 
-
-      <div className="text-center px-6">
+      <div className="text-center sm:px-6">
         {slides[index]}
       </div>
-
    
       <button
         onClick={handleNext}
-        className="px-4 py-2 bg-myOcean text-white rounded hover:bg-myDark cursor-pointer"
+        className="px-3 sm:px-4 py-2 bg-myOcean text-white rounded hover:bg-myDark cursor-pointer"
       >
     <FaArrowRight />
     </button>

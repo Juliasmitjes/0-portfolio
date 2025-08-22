@@ -26,7 +26,7 @@ const Header = ({setShowContactForm}) => {
     <div className={`bg-myOcean sticky top-0 z-50 transition-all duration-600 ${
         scrolled ? 'opacity-80 pt-0 backdrop-blur-sm' : 'pt-6'}`}>
 
-    <nav className="bg-myWarm md:flex md:items-center md:justify-end py-4 px-8 mx-6">
+    <nav className="bg-myWarm md:flex md:items-center md:justify-end py-0 sm:py-4 pl-2 sm:px-8 mx-0 sm:mx-6">
 
     <div className="flex items-center flex-wrap">
         

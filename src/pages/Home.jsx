@@ -8,27 +8,27 @@ const Home = () => {
   const { setShowContactForm } = useOutletContext();
 
   return (
-    <div id="aboutme" className="bg-myOcean scroll-mt-0">
-      <div className="bg-myWarm pt-18 mx-6">
+    <div id="aboutme" className="bg-myOcean scroll-mt-0 overflow-x-hidden">
+      <div className="bg-myWarm pt-6 mx-0 sm:pt-18 sm:mx-6">
 
       <div className="flex flex-col items-center">
-         <h1 className="text-[80px] font-myHeader text-myBlue">
+         <h1 className="font-myHeader self-start sm:self-center ml-2 sm:ml-0 sm:text-center text-myBlue text-[50px] sm:text-[80px] ">
         Hi! I'm Julia Smitjes
       </h1>
-      <p className="text-3xl font-myText font-bold text-myOcean pt-4 pb-20">  
+      <p className="text-xl self-start ml-2 sm:self-center sm:ml-0 sm:text-3xl font-myText font-bold text-myOcean pt-2 pb-6 sm:pb-20">  
         Running on Wi-Fi, espresso, and curiosity.
       </p>
-      <img className="h-100 object-scale-down rounded-lg " src="images/JuliaSmitjesImage.jpeg" alt="Julia Smitjes" />
+      <img className="h-100 object-scale-down sm:rounded-lg" src="images/JuliaSmitjesImage.jpeg" alt="Julia Smitjes" />
       </div>   
-        <div className="flex flex-col place-items-center justify-center bg-myWarm pt-15 mx-4">
-          <h1 className="text-4xl font-myHeader text-myBlue pb-8">
+        <div className="flex flex-col sm:place-items-center sm:justify-center bg-myWarm pt-6 sm:pt-15 ml-2 sm:mx-4">
+          <h1 className="hidden sm:block text-4xl font-myHeader text-myBlue pb-8">
             A bit about me
           </h1>
-          <p className="text-2xl font-bold font-myText text-myOcean pb-25 max-w-lg text-center">
+          <p className="text-lg sm:text-2xl font-bold font-myText text-myOcean pb-10 sm:pb-25 max-w-lg sm:text-center">
             I light up around good ideas and great people. From debugging code to designing systems, I’m all about mixing tech with taste.
           </p>
           </div>
-          <div id="resume-section" className="scroll-mt-25 bg-myOcean py-10">
+          <div id="resume-section" className="scroll-mt-25 bg-myOcean pb-6 sm:pt-4 sm:py-10">
             <div className="max-w-2xl mx-auto">
               <Resume />
             </div>

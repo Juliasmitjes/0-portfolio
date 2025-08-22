@@ -27,9 +27,9 @@ const ContactPanel = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed inset-y-0 right-0 max-w-md w-full bg-myBlue p-6 shadow-xl z-50 transition-transform duration-300">
-      <button onClick={onClose} className="absolute top-4 right-4 cursor-pointer text-myOcean font-bold">✕</button>
-      <h2 className="text-xl font-myHeader text-myOcean mb-4">Contact me</h2>
+    <div className="fixed inset-y-0 right-0 max-w-md w-full bg-myOcean p-6 shadow-xl z-50 transition-transform duration-300">
+      <button onClick={onClose} className="absolute top-4 right-4 cursor-pointer text-white font-bold">✕</button>
+      <h2 className="text-xl font-myHeader text-white mb-4">Contact me</h2>
 
       <form ref={form} onSubmit={sendEmail} className="space-y-4">
         <input type="text" name="user_name" placeholder="Name" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" />
@@ -38,7 +38,7 @@ const ContactPanel = ({ onClose }) => {
         
         <textarea name="message" placeholder="Message" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" rows="5" />
 
-        <input type="submit" value="Submit" className="font-myText font-bold cursor-pointer text-white bg-myOcean px-4 py-2 rounded hover:bg-myDark"/>
+        <input type="submit" value="Submit" className="font-myText font-bold cursor-pointer text-white bg-myBlue px-4 py-2 rounded hover:bg-myDark"/>
       </form>
 
       {showPopup && (
@@ -54,17 +54,17 @@ const ContactPanel = ({ onClose }) => {
       )}
 
       <div className="flex items-center pt-8 space-x-2">
-        <a href="mailto:julia.s@live.nl" className="text-myOcean hover:text-myDark">
+        <a href="mailto:julia.s@live.nl" className="text-white hover:text-myDark">
           <MdAlternateEmail className="text-2xl" />
         </a>
-        <p className="font-myText text-myOcean font-bold">julia.s@live.nl</p>
+        <p className="font-myText text-white font-bold">julia.s@live.nl</p>
       </div>
 
       <div className="flex items-center pt-2 space-x-2 mt-2">
-        <a href="tel:+31614292489" className="text-myOcean hover:text-myDark">
+        <a href="tel:+31614292489" className="text-white hover:text-myDark">
           <FaPhoneAlt className="text-xl" />
         </a>
-        <p className="font-myText text-myOcean font-bold">+316 14292489</p>
+        <p className="font-myText text-white font-bold">+316 14292489</p>
       </div>
     </div>
   );

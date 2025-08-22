@@ -11,13 +11,14 @@ const ContactPanel = ({ onClose }) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    setShowPopup(true);
-    form.current.reset();
-    setTimeout(() => setShowPopup(false), 3000);
-
     emailjs
       .sendForm('service_0kf03ig', 'template_4n72uao', form.current, {
         publicKey: 'SmhOnVEe_yGsYJZoZ',
+      })
+      .then(()=> {
+        setShowPopup(true);
+        form.current.reset();
+        setTimeout(() => setShowPopup(false), 3000);
       })
       .catch(() => {
         setErrorPopup(true);

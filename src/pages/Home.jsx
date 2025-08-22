@@ -15,7 +15,7 @@ const Home = () => {
          <h1 className="text-[80px] font-myHeader text-myBlue">
         Hi! I'm Julia Smitjes
       </h1>
-      <p className="text-3xl font-myText text-myOcean pt-4 pb-20">  
+      <p className="text-3xl font-myText font-bold text-myOcean pt-4 pb-20">  
         Running on Wi-Fi, espresso, and curiosity.
       </p>
 
@@ -35,7 +35,7 @@ const Home = () => {
       <h1 className="text-4xl font-myHeader text-myBlue pb-8">
         A bit about me
       </h1>
-      <p className="text-2xl font-myText text-myOcean pb-25 max-w-lg text-center">
+      <p className="text-2xl font-bold font-myText text-myOcean pb-25 max-w-lg text-center">
         I light up around good ideas and great people. From debugging code to designing systems, I’m all about mixing tech with taste.
       </p>
       </div>
@@ -53,7 +53,7 @@ const Home = () => {
         <h1 className="text-4xl font-myHeader text-myBlue pb-8">
           Contact
         </h1>
-        <p className="text-2xl font-myText text-myOcean pb-8 max-w-lg text-center">
+        <p className="text-2xl font-myText text-myOcean font-bold pb-8 max-w-lg text-center">
           Let’s talk. I’d love to hear from you.
         </p>
         <button

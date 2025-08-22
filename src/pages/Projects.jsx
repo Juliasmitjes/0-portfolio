@@ -24,7 +24,7 @@ const Projects = () => (
               alt="arrow"
               className="w-28 h-auto"
             />
-            <p className="ml-4 mb-13 text-2xl font-myText text-myOcean">
+            <p className="ml-4 mb-13 font-bold text-2xl font-myText text-myOcean">
               Curious about today's <br />
               weather?
             </p>
@@ -85,7 +85,7 @@ const Projects = () => (
         </div>
 
         <div className="flex items-center mt-25 ml-7">
-          <p className="text-2xl font-myText text-myOcean mt-20 pl-7">
+          <p className="text-2xl font-myText font-bold text-myOcean mt-20 pl-7">
             Or maybe you'd rather play a game?
           </p>
           <img 

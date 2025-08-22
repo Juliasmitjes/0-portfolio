@@ -16,7 +16,7 @@ const Header = ({setShowContactForm}) => {
         
         <div className="flex items-center space-x-4">
           
-          <ul className="hidden md:flex items-center space-x-8">
+          <ul className="hidden md:flex font-bold items-center space-x-8">
             {navLinks.map(link => (
               <li key={link.name}>
                 <HashLink

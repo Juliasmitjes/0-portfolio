@@ -4,7 +4,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-myWarm: #F9FAF0;
+  --color-myWarm: #FAFBFC;
   --color-myBlue: #91C8E4;
   --color-myOcean: #4682A9;
   --color-myDark: #769FCD; 

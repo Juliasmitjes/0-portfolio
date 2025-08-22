@@ -23,12 +23,16 @@ const Header = ({setShowContactForm}) => {
   }, []);
 
   return (
-  <div className={`sticky top-0 z-50 transition-all duration-700
-  ${scrolled ? 'bg-myDark/80 pt-0 backdrop-blur-sm' : 'bg-myDark pt-6'}`}>
-    <nav className={`bg-myWarm md:flex md:items-center md:justify-end p-4 md:p-6 xl:p-8 mx-6 transition-all
-    ${scrolled ? 'border-b border-myDark/30' : ''}`}>
+    <div className={`bg-myDark sticky top-0 z-50 transition-all duration-600 ${
+        scrolled ? 'bg-myDark/80 pt-0 backdrop-blur-sm' : 'bg-myDark pt-6'}`}>
+
+    <nav className={`bg-myWarm md:flex md:items-center md:justify-end p-4 md:p-6 xl:p-8 mx-6 transition-all ${
+      scrolled ? 'border-b border-myDark backdrop-blur-sm' : ''}`}>
+
     <div className="flex items-center flex-wrap">
+        
         <div className="flex items-center space-x-4">
+          
           <ul className="hidden md:flex font-bold items-center space-x-8">
             {navLinks.map(link => (
               <li key={link.name}>
@@ -75,14 +79,7 @@ const Header = ({setShowContactForm}) => {
         </div>
       </div>     
     </nav>
-
-
-
-
-
-    </div>
-    
-  )
-}
+  </div>
+)};
 
 export default Header

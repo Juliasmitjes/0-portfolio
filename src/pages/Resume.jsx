@@ -7,7 +7,7 @@ const Resume = () => {
      <a
         href="/path/to/resume.pdf"
         download
-        className="md:inline-flex items-center font-myText sm:mt-10 px-4 py-2 bg-myBlue text-white rounded-lg text-lg cursor-pointer font-bold hover:bg-myDark"
+        className="block w-full text-center sm:w-auto md:inline-flex items-center font-myText sm:mt-10 px-4 py-2 bg-myBlue text-white rounded-lg text-lg cursor-pointer font-bold hover:bg-myDark active:scale-110 sm:active:scale-100"
       >
       Download resume
       </a>

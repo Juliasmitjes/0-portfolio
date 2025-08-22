@@ -8,7 +8,6 @@ const navLinks = [
   { name: 'Julia Smitjes', href: '/#aboutme' },
 ]
 
-
 const Footer = () => {
   return (
 <div className="bg-myOcean">

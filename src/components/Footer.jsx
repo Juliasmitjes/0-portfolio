@@ -17,7 +17,7 @@ const Footer = () => {
             <li key={index}>
             <HashLink
                 to={link.href}
-                className="text-white font-myText hover:text-myDark text-lg ml-10 mr-4 md:mr-6"
+                className="text-white font-bold font-myText hover:text-myDark text-lg ml-10 mr-4 md:mr-6"
             >
                 {link.name || "Link"}
             </HashLink>

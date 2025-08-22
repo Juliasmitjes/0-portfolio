@@ -1,8 +1,7 @@
 import { HashLink } from 'react-router-hash-link';
 import { useState, useEffect } from 'react';
 
-
-'use client' 
+'use client'
 
 const navLinks = [
   { name: 'About me', href: '/#aboutme' },
@@ -10,12 +9,13 @@ const navLinks = [
   { name: 'Projects', href: '/#projects-section' },
 ]
 
-const Header = ({setShowContactForm}) => {
+const Header = ({ setShowContactForm }) => {
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10); 
+      setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -23,27 +23,27 @@ const Header = ({setShowContactForm}) => {
   }, []);
 
   return (
-    <div className={`bg-myOcean sticky top-0 z-50 transition-all duration-600 ${
-        scrolled ? 'opacity-80 pt-0 backdrop-blur-sm' : 'pt-6'}`}>
-
-    <nav className="bg-myWarm md:flex md:items-center md:justify-end py-0 sm:py-4 pl-2 sm:px-8 mx-0 sm:mx-6">
-
-    <div className="flex items-center flex-wrap">
-        
-        <div className="flex items-center space-x-4">
-          
+    <div
+      className={`bg-myOcean sticky top-0 z-50 transition-all duration-600 ${
+        scrolled ? 'opacity-80 pt-0 backdrop-blur-sm' : 'pt-6'
+      }`}
+    >
+      <nav className="bg-myWarm md:flex md:items-center md:justify-end py-0 sm:py-4 pl-2 sm:px-8 mx-0 sm:mx-6">
+        <div className="flex items-center justify-between w-full md:w-auto">
           <ul className="hidden md:flex font-bold items-center space-x-8">
-            {navLinks.map(link => (
+            {navLinks.map((link) => (
               <li key={link.name}>
                 <HashLink
                   to={link.href}
                   className="px-3 py-2 text-myOcean text-lg font-myText hover:text-myBlue"
+                  onClick={() => setIsOpen(false)} 
                 >
                   {link.name}
                 </HashLink>
               </li>
             ))}
           </ul>
+
           <button
             type="button"
             onClick={() => setShowContactForm(true)}
@@ -52,33 +52,70 @@ const Header = ({setShowContactForm}) => {
             Contact
           </button>
 
-          {/* Mobiel NOG DOEN */}
           <button
-            data-collapse-toggle="navbar-sticky"
             type="button"
+            onClick={() => setIsOpen(!isOpen)}
             className="inline-flex items-center justify-center p-2 w-10 h-10 text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-expanded={isOpen}
           >
             <span className="sr-only">Open main menu</span>
             <svg
-              className="w-5 h-5"
+              className="w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              {isOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
             </svg>
           </button>
         </div>
-      </div>     
-    </nav>
-  </div>
-)};
 
-export default Header
+        {isOpen && (
+          <div
+            id="mobile-menu"
+            className="w-full md:hidden flex flex-col space-y-4 mt-4"
+          >
+            {navLinks.map((link) => (
+              <HashLink
+                key={link.name}
+                to={link.href}
+                className="block px-3 py-2 text-myOcean text-lg font-bold font-myText hover:text-myBlue"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </HashLink>
+            ))}
+
+            <button
+              type="button"
+              onClick={() => {
+                setShowContactForm(true);
+                setIsOpen(false);
+              }}
+              className="w-full text-left px-3 py-2 bg-myOcean text-white rounded-lg text-lg cursor-pointer font-bold hover:bg-myDark focus:outline-none focus:ring-2 focus:ring-blue-300"
+            >
+              Contact
+            </button>
+          </div>
+        )}
+      </nav>
+    </div>
+  );
+};
+
+export default Header;

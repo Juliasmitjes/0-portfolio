@@ -24,7 +24,7 @@ const Header = ({setShowContactForm}) => {
 
   return (
     <div className={`bg-myDark sticky top-0 z-50 transition-all duration-600 ${
-        scrolled ? 'bg-myDark/80 pt-0 backdrop-blur-sm' : 'bg-myDark pt-6'}`}>
+        scrolled ? 'opacity-80 pt-0 backdrop-blur-sm' : 'pt-6'}`}>
 
     <nav className={`bg-myWarm md:flex md:items-center md:justify-end p-4 md:p-6 xl:p-8 mx-6 transition-all ${
       scrolled ? 'border-b border-myDark backdrop-blur-sm' : ''}`}>

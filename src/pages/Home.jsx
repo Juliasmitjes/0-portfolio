@@ -8,7 +8,7 @@ const Home = () => {
   const { setShowContactForm } = useOutletContext();
 
   return (
-    <div id="aboutme" className="bg-myDark">
+    <div id="aboutme" className="bg-myDark scroll-mt-20">
       <div className="bg-myWarm pt-16 mx-6">
 
       <div className="flex flex-col items-center">
@@ -40,12 +40,12 @@ const Home = () => {
       </p>
       </div>
     <div className="flex flex-col items-center">
-      <div id="resume-section" className="w-2xl h-96 mb-40">
+      <div id="resume-section" className="w-2xl h-96 mb-40 scroll-mt-26">
         <Resume />
       </div>
     </div>
     
-    <div id="projects-section" >
+    <div id="projects-section" className="scroll-mt-26" >
       <Projects />
     </div>
       <div>

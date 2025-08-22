@@ -32,11 +32,11 @@ const ContactPanel = ({ onClose }) => {
       <h2 className="text-xl font-myHeader text-white mb-4">Contact me</h2>
 
       <form ref={form} onSubmit={sendEmail} className="space-y-4">
-        <input type="text" name="user_name" placeholder="Name" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" />
+        <input type="text" name="user_name" placeholder="Name" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myBlue" />
 
-        <input type="email" name="user_email" placeholder="Email" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" />
+        <input type="email" name="user_email" placeholder="Email" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myBlue" />
         
-        <textarea name="message" placeholder="Message" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myDark" rows="5" />
+        <textarea name="message" placeholder="Message" className="font-myText text-myDark w-full bg-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-myBlue" rows="5" />
 
         <input type="submit" value="Submit" className="font-myText font-bold cursor-pointer text-white bg-myBlue px-4 py-2 rounded hover:bg-myDark"/>
       </form>

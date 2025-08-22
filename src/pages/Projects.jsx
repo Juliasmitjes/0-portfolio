@@ -9,7 +9,7 @@ const navLinks = [
 ]
 
 const Projects = () => (
-  <div className="min-h-screen bg-myWarm pt-10 sm:pt-26 pb-20">
+  <div className="bg-myWarm pt-10 sm:pt-26 pb-20">
     <div className="max-w-6xl mx-auto sm:px-6">
       <h1 className="text-center text-2xl sm:text-4xl font-myHeader text-myBlue mb-3 sm:mb-12">
         Projects

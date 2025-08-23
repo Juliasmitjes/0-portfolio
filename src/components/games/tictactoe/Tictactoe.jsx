@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react';
 import { GiPodiumWinner } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
+import { HashLink } from 'react-router-hash-link'; 
+
+const homeLink = [
+{name: 'Quit game', href: '/#aboutme'}
+]
+
 
 function Square({ value, onSquareClick }) {
   return (
@@ -120,6 +126,19 @@ const Tictactoe = () => {
       setEndMessage={setEndMessage}
      />
     </div>
+     <ul className="hidden md:flex font-bold items-center space-x-8 mt-8">
+      {homeLink.map((link) => (
+        <li key={link.name}>
+          <HashLink
+            to={link.href}
+            className="px-3 py-2 text-myOcean text-lg font-myText hover:text-myBlue"
+            onClick={() => homeLink(false)} 
+          >
+            {link.name}
+          </HashLink>
+        </li>
+      ))}
+    </ul>
   </div>
 </div>
   );

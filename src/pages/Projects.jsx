@@ -12,7 +12,7 @@ const Projects = () => (
   <div className="bg-myWarm pt-10 sm:pt-26 pb-20">
     <div className="max-w-6xl mx-auto sm:px-6">
       <h1 className="text-center text-2xl sm:text-4xl font-myHeader text-myBlue mb-3 sm:mb-12">
-        Projects
+        Creations
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">

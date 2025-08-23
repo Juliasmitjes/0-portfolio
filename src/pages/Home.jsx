@@ -25,7 +25,7 @@ const Home = () => {
             A bit about me
           </h1>
           <p className="hidden sm:block text-2xl font-bold font-myText text-myOcean pb-25 max-w-lg text-center">
-            I light up around good ideas and great people. From debugging code to designing systems, I’m all about mixing tech with taste.
+            I light up around good ideas and great people. From designing systems to debugging code, I’m all about mixing tech with taste.
           </p>
           </div>
           <div id="resume-section" className="scroll-mt-25 bg-myOcean pb-12 sm:pt-4 sm:py-10">

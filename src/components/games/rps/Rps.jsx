@@ -1,5 +1,10 @@
 import { useState } from 'react';
 import { FaHandRock, FaHandPaper, FaHandScissors  } from "react-icons/fa";
+import { HashLink } from 'react-router-hash-link';
+
+const homeLink = [
+{name: 'Quit game', href: '/#aboutme'}
+]
 
  const actions = {
     rock: "scissors",
@@ -105,7 +110,21 @@ function Rps() {
       </div>
     </div>
     <ShowWinner winner={winner}/>
+    <ul className="hidden md:flex font-bold items-center space-x-8 mt-16">
+      {homeLink.map((link) => (
+        <li key={link.name}>
+          <HashLink
+            to={link.href}
+            className="px-3 py-2 text-myOcean text-lg font-myText hover:text-myBlue"
+            onClick={() => homeLink(false)} 
+          >
+            {link.name}
+          </HashLink>
+        </li>
+      ))}
+     </ul>
   </div>
+  
 </div>
   
     

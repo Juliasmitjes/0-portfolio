@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { GiPodiumWinner } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
+import { HashLink } from 'react-router-hash-link';
 import Card from './Card.jsx';
 import avocado from '../../../images/memory/avocado.png';
 import bee from '../../../images/memory/bee.png';
@@ -10,6 +11,10 @@ import guitar from '../../../images/memory/guitar.png';
 import kareoke from '../../../images/memory/kareoke.png';
 import pizza from '../../../images/memory/pizza.png';
 import present from '../../../images/memory/present.png';
+
+const homeLink = [
+{name: 'Quit game', href: '/#aboutme'}
+]
 
 function Memory(){
 
@@ -146,6 +151,19 @@ function handleClick(id) {
         />
       ))}
       </div>
+      <ul className="hidden md:flex font-bold items-center space-x-8 mt-8">
+        {homeLink.map((link) => (
+          <li key={link.name}>
+            <HashLink
+              to={link.href}
+              className="px-3 py-2 text-myOcean text-lg font-myText hover:text-myBlue"
+              onClick={() => homeLink(false)} 
+            >
+              {link.name}
+            </HashLink>
+          </li>
+        ))}
+      </ul>
   </div>  
 </div>
 )}

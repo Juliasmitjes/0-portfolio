@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 const navLinks = [
   { name: 'About me', href: '/#aboutme' },
   { name: 'Resume', href: '/#resume-section' },
-  { name: 'Projects', href: '/#projects-section' },
+  { name: 'Creations', href: '/#projects-section' },
 ]
 
 const Header = ({ setShowContactForm }) => {

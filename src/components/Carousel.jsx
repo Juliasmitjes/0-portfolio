@@ -31,7 +31,7 @@ const slides = [
       <h1 className="mb-1 sm:mb-3 text-2xl sm:text-4xl font-myHeader text-myBlue">Competences</h1>
       <p className="text-lg sm:text-2xl font-myText text-white sm:text-myOcean font-semibold"> Frontend webdevelopment </p>
          <p className="hidden sm:block text-lg sm:text-2xl font-myText text-white sm:text-myOcean">
-          HTML, (Taiwlind) CSS, JavaScript, <sm:br /> React + Vite
+          HTML, (Tailwind) CSS, JavaScript, <sm:br /> React + Vite
           </p>
           <h1 className="mb-1 sm:mb-3 text-2xl sm:text-4xl font-myHeader text-myBlue pt-3 sm:pt-6">Interests</h1>
          <p className="text-lg sm:text-2xl font-myText text-white sm:text-myOcean font-semibold "> Backend webdevelopment </p>

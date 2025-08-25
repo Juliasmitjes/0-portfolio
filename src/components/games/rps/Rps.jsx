@@ -103,7 +103,7 @@ function Rps() {
         <Player name="player" score={playerScore} action={playerAction}/>          
         <Player name="Computer" score={computerScore} action={computerAction}/>
       </div>
-      <div className="pb-8 items-center justify-center text-myOcean">
+      <div className="pb-8 items-center flex flex-row justify-center text-myOcean">
         <ActionButton action="rock" onActionSelected={onActionSelected}/>
         <ActionButton action="paper" onActionSelected={onActionSelected}/>
         <ActionButton action="scissors" onActionSelected={onActionSelected}/>

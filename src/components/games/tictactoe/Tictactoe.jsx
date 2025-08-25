@@ -81,7 +81,7 @@ function Board({ xIsNext, squares, onPlay, endMessage, setEndMessage }) {
         
      <div className="my-8 flex items-center justify-center flex-col">
       <p className="text-2xl sm:text-4xl font-myHeader text-myBlue pb-8">Tic tac toe</p>
-       <div className="pb-8 text-myOcean text-base font-base">{status}</div>
+       <div className="pb-8 text-myOcean text-lg font-base">{status}</div>
       <div className="grid grid-cols-3 w-xs h-[100px]">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />

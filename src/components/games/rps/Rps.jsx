@@ -55,7 +55,7 @@ function Player({name = "player", score = 0, action="rock"}){
 
 function ActionButton({action = "rock", onActionSelected}){
   return(
-    <button className="justify-items-center w-20 h-20 cursor-pointer hover:text-myBlue active:scale-110 sm:active:scale-100 " onClick={() => onActionSelected(action)}>
+    <button className="flex items-center justify-center w-20 h-20 cursor-pointer hover:text-myBlue active:scale-110 sm:active:scale-100" onClick={() => onActionSelected(action)}>
      <ActionIcon action={action} size={20}/>
     </button>
   )

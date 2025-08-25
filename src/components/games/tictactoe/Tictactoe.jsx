@@ -116,7 +116,7 @@ const Tictactoe = () => {
   }
   return (
     <div className="bg-myOcean">
-      <div className="sm:bg-myWarm bg-white sm:mx-6 pb-20 flex items-center justify-center flex-col">
+      <div className="bg-myWarm h-screen sm:mx-6 pb-20 flex items-center justify-center flex-col">
     <div className="text-xl sm:text-4xl font-myHeader text-myBlue">
       <Board 
       xIsNext={xIsNext} 
@@ -126,12 +126,12 @@ const Tictactoe = () => {
       setEndMessage={setEndMessage}
      />
     </div>
-     <ul className="hidden md:flex font-bold items-center space-x-8 mt-8">
+     <ul className="flex font-bold items-center space-x-8 mt-8">
       {homeLink.map((link) => (
         <li key={link.name}>
           <HashLink
             to={link.href}
-            className="px-3 py-2 text-myOcean text-lg font-myText hover:text-myBlue"
+            className="px-3 py-2 text-myOcean text-md sm:text-lg font-myText hover:text-myBlue"
             onClick={() => homeLink(false)} 
           >
             {link.name}

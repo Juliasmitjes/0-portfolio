@@ -106,7 +106,7 @@ function handleClick(id) {
 
   return ( 
 <div className="relative bg-myOcean">  
-  <div className="bg-myWarm sm:mx-6 pb-10 flex flex-col items-center">
+  <div className="h-screen bg-myWarm sm:mx-6 pb-10 flex flex-col items-center">
      <p className="text-2xl sm:text-4xl font-myHeader text-myBlue pb-8">Memory</p>
 
     {endMessage && (
@@ -115,7 +115,7 @@ function handleClick(id) {
         role="dialog"
         aria-modal="true"
       >
-        <div className="relative bg-white w-lg p-6 rounded-lg text-center shadow-lg">
+        <div className="relative h-screen bg-white w-lg p-6 rounded-lg text-center shadow-lg">
           <button
           type="button"
           aria-label="Close"
@@ -151,12 +151,12 @@ function handleClick(id) {
         />
       ))}
       </div>
-      <ul className="hidden md:flex font-bold items-center space-x-8 mt-8">
+      <ul className="flex font-bold items-center space-x-8 mt-8">
         {homeLink.map((link) => (
           <li key={link.name}>
             <HashLink
               to={link.href}
-              className="px-3 py-2 text-myOcean text-lg font-myText hover:text-myBlue"
+              className="px-3 py-2 text-myOcean text-md sm:text-lg font-myText hover:text-myBlue"
               onClick={() => homeLink(false)} 
             >
               {link.name}

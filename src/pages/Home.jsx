@@ -8,7 +8,7 @@ const Home = () => {
   const { setShowContactForm } = useOutletContext();
 
   return (
-    <div id="aboutme" className="bg-myOcean scroll-mt-0 overflow-x-hidden">
+    <div id="aboutme" className=" bg-myOcean scroll-mt-0 overflow-x-hidden">
       <div className="bg-myWarm pt-6 mx-0 sm:pt-18 sm:mx-6">
 
       <div className="flex flex-col items-center">
@@ -18,13 +18,13 @@ const Home = () => {
       <p className="text-xl self-start ml-2 sm:self-center sm:ml-0 sm:text-3xl font-myText font-bold text-myOcean pt-2 pb-6 sm:pb-20">  
         Running on Wi-Fi, espresso, and curiosity.
       </p>
-      <img className="h-full sm:h-100 object-scale-down sm:rounded-lg" src="images/JuliaSmitjesImage.jpeg" alt="Julia Smitjes" />
+      <img className="sm:h-100 object-scale-down sm:rounded-lg" src="images/JuliaSmitjesImage.jpeg" alt="Julia Smitjes" />
       </div>   
         <div className="flex flex-col sm:place-items-center sm:justify-center bg-myWarm pt-0 sm:pt-15 ml-2 sm:mx-4">
-          <h1 className="hidden sm:block text-4xl font-myHeader text-myBlue pb-8">
+          <h1 className="text-2xl ml-3 sm:ml-0 mt-3 sm:mt-0 sm:text-4xl font-myHeader text-myBlue pb-2 sm:pb-8">
             A bit about me
           </h1>
-          <p className="hidden sm:block text-2xl font-bold font-myText text-myOcean pb-25 max-w-lg text-center">
+          <p className="text-xl sm:text-2xl font-bold font-myText text-myOcean ml-3 sm:ml-0 pb-6 sm:pb-25 max-w-lg sm:text-center">
             I light up around good ideas and great people. From designing systems to debugging code, I’m all about mixing tech with taste.
           </p>
           </div>

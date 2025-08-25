@@ -96,7 +96,7 @@ function Rps() {
 
   return (
 <div className="flex flex-col bg-myOcean">
-  <div className="justify-items-center w-full sm:w-auto sm:bg-myWarm sm:mx-6 sm:pb-20">
+  <div className="h-screen justify-items-center w-full sm:w-auto bg-myWarm sm:mx-6 sm:pb-20">
     <h1 className="text-2xl sm:text-4xl font-myHeader text-myBlue pb-8 pt-10 sm:pt-8 ">Rock paper siccors</h1>
     <div>
       <div className="flex items-center justify-center pb-4">
@@ -110,12 +110,12 @@ function Rps() {
       </div>
     </div>
     <ShowWinner winner={winner}/>
-    <ul className="hidden md:flex font-bold items-center space-x-8 mt-16">
+    <ul className="flex font-bold items-center space-x-8 mt-16">
       {homeLink.map((link) => (
         <li key={link.name}>
           <HashLink
             to={link.href}
-            className="px-3 py-2 text-myOcean text-lg font-myText hover:text-myBlue"
+            className="px-3 py-2 text-myOcean text-md sm:text-lg font-myText hover:text-myBlue"
             onClick={() => homeLink(false)} 
           >
             {link.name}

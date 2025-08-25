@@ -96,7 +96,7 @@ function Rps() {
 
   return (
 <div className="flex flex-col bg-myOcean">
-  <div className="h-screen justify-items-center w-full sm:w-auto bg-myWarm sm:mx-6 sm:pb-20">
+  <div className="h-screen justify-items-center content-center w-full sm:w-auto bg-myWarm sm:mx-6 sm:pb-20">
     <h1 className="text-2xl sm:text-4xl font-myHeader text-myBlue pb-8 pt-10 sm:pt-8 ">Rock paper siccors</h1>
     <div>
       <div className="flex items-center justify-center pb-4">

@@ -4,7 +4,7 @@ import { FaTimes } from "react-icons/fa";
 import { HashLink } from 'react-router-hash-link'; 
 
 const homeLink = [
-{name: 'Quit game', href: '/#aboutme'}
+{name: 'Quit game', href: '/#projects-section'}
 ]
 
 

@@ -13,7 +13,7 @@ import pizza from '../../../images/memory/pizza.png';
 import present from '../../../images/memory/present.png';
 
 const homeLink = [
-{name: 'Quit game', href: '/#aboutme'}
+{name: 'Quit game', href: '/#projects-section'}
 ]
 
 function Memory(){

@@ -110,7 +110,7 @@ function Rps() {
       </div>
     </div>
     <ShowWinner winner={winner}/>
-    <ul className="flex font-bold items-center space-x-8 mt-16">
+    <ul className="flex font-bold justify-center items-center space-x-8 mt-16">
       {homeLink.map((link) => (
         <li key={link.name}>
           <HashLink
